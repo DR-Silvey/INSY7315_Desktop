@@ -20,28 +20,28 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessments/AssesmentPool/AvailableQuestions.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudHNcQXNzZXNtZW50UG9vbFxBdmFpbGFibGVRdWVzdGlvbnMuY3NodG1s
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssesmentPool/AvailableQuestions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc21lbnRQb29sXEF2YWlsYWJsZVF1ZXN0aW9ucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessments/AssesmentPool/CRUDQuestion.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudHNcQXNzZXNtZW50UG9vbFxDUlVEUXVlc3Rpb24uY3NodG1s
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssesmentPool/CRUDQuestion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc21lbnRQb29sXENSVURRdWVzdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessments/AssessmentBuilders/CreateAssesment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudHNcQXNzZXNzbWVudEJ1aWxkZXJzXENyZWF0ZUFzc2VzbWVudC5jc2h0bWw=
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentBuilders/CreateAssessment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50QnVpbGRlcnNcQ3JlYXRlQXNzZXNzbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessments/AssessmentBuilders/UpdateAssesment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudHNcQXNzZXNzbWVudEJ1aWxkZXJzXFVwZGF0ZUFzc2VzbWVudC5jc2h0bWw=
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentBuilders/UpdateAssesment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50QnVpbGRlcnNcVXBkYXRlQXNzZXNtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessments/AssessmentHosts/EndAssesment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudHNcQXNzZXNzbWVudEhvc3RzXEVuZEFzc2VzbWVudC5jc2h0bWw=
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentHosts/EndAssesment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50SG9zdHNcRW5kQXNzZXNtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessments/AssessmentHosts/StartAssesment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudHNcQXNzZXNzbWVudEhvc3RzXFN0YXJ0QXNzZXNtZW50LmNzaHRtbA==
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentHosts/StartAssesment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50SG9zdHNcU3RhcnRBc3Nlc21lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Home/Index.cshtml]
