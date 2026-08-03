@@ -2,12 +2,7 @@
 }
 
 <div id="controls" class="container-fluid d-flex flex-row flex-fill">
-    <form>
-        <button>Add Question</button>
-
-    </form>
-
-    <div>
+    <div class="d-flex flex-column">
         <form>
             <button>FINALISE & SAVE</button>
 
@@ -45,5 +40,45 @@
         <h3>NO QUESTIONS ADDED!!!</h3>
 
     }
+
+    <button button data-bs-toggle="modal" data-bs-target="#modalDivQuestions">Add Question</button>
     
+</div>
+
+<!--Modal Contains a list of available test's the ability to add a new question and the redirection to create a new one-->
+<div id="modalDivQuestions" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-start d-flex flex-column justify-content-center">
+                <div class="d-flex flex-fill flex-row">
+                    <button>FILTER</button>
+
+                    <select>
+                        <option value="">Options:</option>
+
+                    </select>
+
+                </div>
+
+                <h1>NO QUESTIONS AVAILABLE, Please add one☺.</h1>
+
+                <div class="d-flex flex-fill flex-row">
+                    <form>
+                        <button>Add Selected To Exam</button>
+
+                    </form>
+
+                    <!--Redirects the user to the page where they can add a new question to the available pool-->
+                    <form asp-controller="Assessment" asp-action="CRUDQuestion">
+                        <button>CREATE NEW QUESTION</button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 </div>

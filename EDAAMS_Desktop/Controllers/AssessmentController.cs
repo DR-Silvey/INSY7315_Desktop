@@ -10,5 +10,11 @@ namespace EDAAMS_Desktop.Controllers
 
         }
 
+        public IActionResult CRUDQuestion()
+        {
+            return View("AssessmentPool/CRUDQuestion");
+
+        }
+
     }
 }
