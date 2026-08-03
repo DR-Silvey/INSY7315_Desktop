@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|c:\\users\\silve\\desktop\\insy7315\\desktop\\edaams_desktop\\edaams_desktop\\views\\assessment\\assessmentpool\\crudquestion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|solutionrelative:edaams_desktop\\views\\assessment\\assessmentpool\\crudquestion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|c:\\users\\silve\\desktop\\insy7315\\desktop\\edaams_desktop\\edaams_desktop\\views\\assessment\\assessmentbuilders\\createassessment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|solutionrelative:edaams_desktop\\views\\assessment\\assessmentbuilders\\createassessment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|c:\\users\\silve\\desktop\\insy7315\\desktop\\edaams_desktop\\edaams_desktop\\controllers\\assessmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|solutionrelative:edaams_desktop\\controllers\\assessmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|c:\\users\\silve\\desktop\\insy7315\\desktop\\edaams_desktop\\edaams_desktop\\views\\assessment\\assesmentpool\\crudquestion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|solutionrelative:edaams_desktop\\views\\assessment\\assesmentpool\\crudquestion.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,39 +42,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CRUDQuestion.cshtml",
-              "DocumentMoniker": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Assessment\\AssesmentPool\\CRUDQuestion.cshtml",
-              "RelativeDocumentMoniker": "EDAAMS_Desktop\\Views\\Assessment\\AssesmentPool\\CRUDQuestion.cshtml",
-              "ToolTip": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Assessment\\AssesmentPool\\CRUDQuestion.cshtml",
-              "RelativeToolTip": "EDAAMS_Desktop\\Views\\Assessment\\AssesmentPool\\CRUDQuestion.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-03T18:40:52.302Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "AssessmentController.cs",
-              "DocumentMoniker": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Controllers\\AssessmentController.cs",
-              "RelativeDocumentMoniker": "EDAAMS_Desktop\\Controllers\\AssessmentController.cs",
-              "ToolTip": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Controllers\\AssessmentController.cs",
-              "RelativeToolTip": "EDAAMS_Desktop\\Controllers\\AssessmentController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-01T16:04:59.04Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "CreateAssessment.cshtml",
               "DocumentMoniker": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Assessment\\AssessmentBuilders\\CreateAssessment.cshtml",
               "RelativeDocumentMoniker": "EDAAMS_Desktop\\Views\\Assessment\\AssessmentBuilders\\CreateAssessment.cshtml",
               "ToolTip": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Assessment\\AssessmentBuilders\\CreateAssessment.cshtml",
               "RelativeToolTip": "EDAAMS_Desktop\\Views\\Assessment\\AssessmentBuilders\\CreateAssessment.cshtml",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAAE0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACgAAAAAAAAAAAAAAC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-01T13:57:03.922Z",
+              "WhenOpened": "2026-08-03T21:02:22.46Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CRUDQuestion.cshtml",
+              "DocumentMoniker": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Assessment\\AssessmentPool\\CRUDQuestion.cshtml",
+              "RelativeDocumentMoniker": "EDAAMS_Desktop\\Views\\Assessment\\AssessmentPool\\CRUDQuestion.cshtml",
+              "ToolTip": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Assessment\\AssessmentPool\\CRUDQuestion.cshtml",
+              "RelativeToolTip": "EDAAMS_Desktop\\Views\\Assessment\\AssessmentPool\\CRUDQuestion.cshtml",
+              "ViewState": "AgIAAFIAAAAAAAAAAAAAAFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-03T18:40:52.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AssessmentController.cs",
+              "DocumentMoniker": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Controllers\\AssessmentController.cs",
+              "RelativeDocumentMoniker": "EDAAMS_Desktop\\Controllers\\AssessmentController.cs",
+              "ToolTip": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Controllers\\AssessmentController.cs",
+              "RelativeToolTip": "EDAAMS_Desktop\\Controllers\\AssessmentController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-01T16:04:59.04Z",
               "EditorCaption": ""
             }
           ]
