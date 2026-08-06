@@ -69,7 +69,7 @@
 <div class="d-flex flex-column">
     <label>Question Details:</label>
 
-    <form class="d-flex flex-fill flex-row">
+    <form class="d-flex flex-fill flex-row" asp-controller="Assessment" asp-action="CreateAssessment">
         <label>Main Question:</label>
         <input />
 
@@ -95,7 +95,24 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body text-start d-flex flex-column justify-content-center">
-                <h1>Yay</h1>
+                <h3>Multi Choice Questions:</h3>
+
+                <form>
+                    <label>A:</label>
+                    <input />
+
+                    <label>B:</label>
+                    <input />
+
+                    <label>C:</label>
+                    <input />
+
+                    <label>D:</label>
+                    <input />
+
+                </form>
+
+                <button>SAVE QUESTION SCHEMA</button>
 
             </div>
 

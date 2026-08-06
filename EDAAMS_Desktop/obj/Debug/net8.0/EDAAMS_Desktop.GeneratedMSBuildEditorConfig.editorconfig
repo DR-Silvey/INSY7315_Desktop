@@ -56,6 +56,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Statistics/StudentStats.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3RhdGlzdGljc1xTdHVkZW50U3RhdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Student/CRUDStudent.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxDUlVEU3R1ZGVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Student/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/User/LogIn.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dJbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/User/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
