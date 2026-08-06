@@ -15,6 +15,18 @@ namespace EDAAMS_Desktop.Controllers
             return View("AssessmentPool/CRUDQuestion");
 
         }
+        
+        public IActionResult MarkAssessment()
+        {
+            return View("AssessmentMarking/MarkAssessment");
+
+        }
+
+        public IActionResult StartAssessment()
+        {
+            return View("AssessmentHosts/StartAssessment");
+
+        }
 
     }
 }

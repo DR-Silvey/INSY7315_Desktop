@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/EDAAMS_Desktop.styles.css" asp-append-version="true" />
 
+    <!--Link to font awesome API-->
+    <script src="https://kit.fontawesome.com/3182cd8206.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <header>
@@ -21,14 +24,38 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home <i class="fa-solid fa-house"></i></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy <i class="fa-solid fa-shield-halved"></i></a>
+                        </li>
+
+                        <!--Links To Log-In Page-->
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogIn">Log-In <i class="fa-solid fa-circle-user"></i></a>
+                        </li>
+
+                        <!--Temp Traversal Method-->
+                        
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="SignUp">Sign-Up</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Assessment" asp-action="CreateAssessment">Create Assesment</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Assessment" asp-action="CreateAssessment">Create-Assessment</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="Index">Students</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Student" asp-action="CRUDStudent">Create-Student</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Assessment" asp-action="MarkAssessment">Mark-Assessment</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Statistics" asp-action="StudentStats">Student-Stats</a>
+                        </li>
+
                     </ul>
                 </div>
             </div>

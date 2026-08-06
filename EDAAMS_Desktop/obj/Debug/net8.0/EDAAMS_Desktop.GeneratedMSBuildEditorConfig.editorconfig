@@ -24,8 +24,8 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50QnVpbGRlcnNcQ3JlYXRlQXNzZXNzbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentBuilders/UpdateAssesment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50QnVpbGRlcnNcVXBkYXRlQXNzZXNtZW50LmNzaHRtbA==
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentBuilders/UpdateAssessment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50QnVpbGRlcnNcVXBkYXRlQXNzZXNzbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentHosts/EndAssesment.cshtml]
@@ -34,6 +34,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentHosts/StartAssesment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50SG9zdHNcU3RhcnRBc3Nlc21lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentMarking/MarkAssessment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50TWFya2luZ1xNYXJrQXNzZXNzbWVudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentPool/CRUDQuestion.cshtml]
