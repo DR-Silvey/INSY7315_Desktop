@@ -2,4 +2,97 @@
     ViewData["Title"] = "Student Statistics Page";
 }
 
-Stud Stats
+<div id="topPerforming" class="d-flex flex-column container-fluid">
+    <h4 class="align-self-start">Top Performers:</h4>
+
+    <div id="availableTopPerformersViewer" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: auto;">
+        @if (1 == 1)
+        {
+            <h6>No Grades/Students Uploaded yet</h6>
+
+        }
+
+    </div>
+
+    <div class="d-flex flex-row container-fluid">
+        <button data-bs-toggle="modal" data-bs-target="#modalDivTopPerformingFilter" class="align-self-start">Filter<i class="fa-solid fa-filter"></i></button>
+
+    </div>
+
+</div>
+
+<div id="studentDetails" class="d-flex flex-column container-fluid">
+    <h4 class="align-self-start">Grade Averages</h4>
+
+    <div id="studentDetailsViewer" class="d-flex flex-column container-fluid">
+        @if (1 == 1)
+        {
+            <h6>No Grades/Students Uploaded yet</h6>
+
+        }
+        else
+        {
+            <!--Graphing to show how averages have changes over a time period-->
+
+        }
+
+    </div>
+
+    <div class="d-flex flex-column container-fluid gap-2">
+        <div class="d-flex flex-row">
+            <label>X-Axis: </label>
+            <select>
+                <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+
+            </select>
+
+        </div>
+
+        <div class="d-flex flex-row">
+            <label>X-Axis: </label>
+            <select>
+                <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+
+            </select>
+
+        </div>
+
+        <div class="d-flex flex-row">
+            <label>Y-Axis: </label>
+            <select>
+                <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+
+            </select>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="modalDivTopPerformingFilter" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-column flex-fill container-fluid gap-2">
+                <h4 class="align-self-start">Filter By:</h4>
+
+                <form class="d-flex flex-column">
+                    <select>
+                        <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+
+                    </select>
+
+                    <label>Value:</label>
+                    <input />
+
+                    <button>Filter</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

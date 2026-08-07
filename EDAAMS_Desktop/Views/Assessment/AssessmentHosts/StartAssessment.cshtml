@@ -2,4 +2,36 @@
     ViewData["Title"] = "Start Assessment Page";
 }
 
-Start Ass
+<form id="assessmentPreview" class="container-fluid d-flex flex-column border-1">
+    <!--Will Display then exam's ID and then a unique student identifier when the xam is hosted now just a preview-->
+    <div id="details" class="d-flex flex-row">
+        <div class="d-flex flex-column">
+            <h4>Assessment ID:</h4>
+            <input type="text" readonly/>
+
+        </div>
+
+        <div class="d-flex flex-column">
+            <h4>Student ID:</h4>
+            <input type="text" readonly />
+
+        </div>
+
+        <button>REPORT PROBLEM</button>
+
+    </div>
+
+    <div class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: auto;">
+        <!--For Loop that reads from db then populates a list of exam questions-->
+        @if (1 == 1)
+        {
+            <h3>NO QUESTIONS ADDED!!!</h3>
+
+        }
+
+    </div>
+    
+
+    <button>Request Exam End</button>
+
+</form>
