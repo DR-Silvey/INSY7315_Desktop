@@ -32,8 +32,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50SG9zdHNcRW5kQXNzZXNtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentHosts/StartAssesment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50SG9zdHNcU3RhcnRBc3Nlc21lbnQuY3NodG1s
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentHosts/StartAssessment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXNzZXNzbWVudFxBc3Nlc3NtZW50SG9zdHNcU3RhcnRBc3Nlc3NtZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Assessment/AssessmentMarking/MarkAssessment.cshtml]
@@ -50,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Home/Settings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXR0aW5ncy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/Shared/Error.cshtml]

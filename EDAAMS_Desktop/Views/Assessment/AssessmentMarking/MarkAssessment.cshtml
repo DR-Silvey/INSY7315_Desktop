@@ -1,5 +1,124 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Mark Assessment Page";
 }
+
+<form id="assessmentPages" class="d-flex flex-column container-fluid">
+    <h4 class="align-self-start">Assessment Pages</h4>
+
+    <div id="assessmentPageViewer" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: auto;">
+        @if (1 == 1)
+        {
+            <h6>No Assessment Pages Uploaded yet</h6>
+
+        }
+
+    </div>
+
+    <div class="d-flex flex-column container-fluid">
+        
+    </div>
+
+    <button>Upload Assessment</button>
+
+</form>
+
+<div id="assessmentPool" class="d-flex flex-column container-fluid">
+    <h4 class="align-self-start">Assessments</h4>
+
+    <div id="availableAssessmentViewer" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: auto;">
+        @if (1 == 1)
+        {
+            <h6>No Assessments Uploaded yet</h6>   
+            
+        }
+
+    </div>
+
+    <div class="d-flex flex-row container-fluid">
+        <button data-bs-toggle="modal" data-bs-target="#modalDivAssessmentFilter" class="align-self-start">Filter <i class="fa-solid fa-filter"></i></button>
+
+        <button data-bs-toggle="modal" data-bs-target="#modalDivNewAssessment" class="align-self-end">Add New Assessment <i class="fa-solid fa-plus"></i></button>
+
+    </div>
+
+</div>
+
+<div id="modalDivAssessmentFilter" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-column flex-fill container-fluid gap-2">
+                <h4 class="align-self-start">Filter By:</h4>
+
+                <form class="d-flex flex-column">
+                    <select>
+                        <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+
+                    </select>
+
+                    <label>Value:</label>
+                    <input />
+
+                    <button>Filter</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="modalDivNewAssessment" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-column flex-fill container-fluid gap-2">
+                <form id="uploadedAssessmentPages" class="d-flex flex-column">
+                    <h4 class="align-self-start">Uploaded Pages</h4>
+                    <div id="uploadedAssessmentPagesViewer" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: auto;">
+
+                    </div>
+
+                    <div class="d-flex flex-row">
+                        <label for="imgUpload"></label>
+                        <input id="imgUpload" type="file"/>
+
+                        <button>Upload Image <i class="fa-solid fa-image"></i></button>
+
+                    </div>
+                    
+                 </form>
+
+                 <form class="d-flex flex-column">
+                    <div class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: auto;">
+                        <h6 class="align-self-start">Test Details:</h6>
+
+                        <label>Assessment ID: *</label>
+                        <input type="text" required/>
+
+                        <label>Student ID: *</label>
+                        <input type="text" required  />
+
+                        <label>Marked Grade (if applicable):</label>
+                        <input type="number"/>
+
+                        <div class="d-flex flex-row">
+                            <label>AUTO MARK TEST</label>
+                            <input type="checkbox" />
+
+                        </div>
+                        
+                     </div>
+
+                    <button>Upload Test Details <i class="fa-solid fa-upload"></i></button>
+
+                 </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

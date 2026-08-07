@@ -1,5 +1,65 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "CRUD Student Page";
 }
+
+<div id="studentDetails" class="d-flex flex-column container-fluid">
+    <h4 class="align-self-start">New Student Details</h4>
+
+    <label>Student ID:</label>
+    <input class="disabled" type="text" readonly />
+
+    <label>Student Full Name:</label>
+    <input class="disabled" type="text" required />
+
+    <label>Current Year of Study:</label>
+    <input class="disabled" type="text" required />
+
+    <label>Current Grade Average:</label>
+    <input class="disabled" type="number" required />
+
+    <!--Displays a list of available subjects with corresponding inputs and checkboxes to save the student's details-->
+    <label>Subjects Taken:</label>
+    <div class="d-flex flex-column">
+        <div id="availableSubjects" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: auto;">
+            @if (1 == 1)
+            {
+                <h6>No Subjects Uploaded yet</h6>
+
+            }
+
+        </div>
+
+        <button type="button" data-bs-toggle="modal" data-bs-target="#modalDivAddSubject">Upload New Subjects</button>
+
+    </div>
+    
+
+    <button type="submit" class="align-self-end">Add New Student <i class="fa-solid fa-user-graduate"></i><i class="fa-solid fa-plus"></i></button>
+
+</div>
+
+<div id="modalDivAddSubject" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-column flex-fill container-fluid gap-2">
+                <h4 class="align-self-start">Subject Details:</h4>
+
+                <form class="d-flex flex-column">
+                    <label>Subject Name:</label>
+                    <input type="text" required/>
+                    <label>Subject Code:</label>
+                    <input type="text" required />
+                    <label>Minimum Passing Grade:</label>
+                    <input type="number" required />
+
+                    <button>Add Subject</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
