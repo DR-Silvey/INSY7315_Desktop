@@ -2,7 +2,7 @@
     ViewData["Title"] = "Start Assessment Page";
 }
 
-<form id="assessmentPreview" class="container-fluid d-flex flex-column border-1">
+<div id="assessmentPreview" class="container-fluid d-flex flex-column border-1">
     <!--Will Display then exam's ID and then a unique student identifier when the xam is hosted now just a preview-->
     <div id="details" class="d-flex flex-row">
         <div class="d-flex flex-column">
@@ -17,7 +17,7 @@
 
         </div>
 
-        <button>REPORT PROBLEM</button>
+        <button data-bs-toggle="modal" data-bs-target="#modalDivReport">REPORT PROBLEM</button>
 
     </div>
 
@@ -32,6 +32,65 @@
     </div>
     
 
-    <button>Request Exam End</button>
+    <button data-bs-toggle="modal" data-bs-target="#modalDivRequestExamEnd">Request Exam End</button>
 
-</form>
+</div>
+
+<div id="modalDivReport" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-start d-flex flex-column justify-content-center">
+                <form class="d-flex flex-column">
+                    <label>Problem Description:</label>
+                    <textarea required></textarea>
+
+                    <select>
+                        <option>Urgency Level <i class="fa-solid fa-arrow-down"></i></option>
+                    </select>
+
+                    <button>Submit</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="modalDivRequestExamEnd" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body text-start d-flex flex-column justify-content-center">
+                <form asp-controller="Assessment" asp-action="EndAssessment" method="post" class="d-flex flex-column">
+                    <h4 class="align-self-start">Final Confirmation:</h4>
+
+                    <div class="d-flex flex-row gap-2">
+                        <label>Did you finish all Questions?</label>
+                        <input type="checkbox" checked/>
+
+                    </div>
+
+                    <!--Auto Fill-->
+                    <div class="d-flex flex-column text-start">
+                        <h6 class="align-self-start">Confirm Details:</h6>
+
+                        <label>Student ID:</label>
+                        <input type="text" required />
+
+                        <label>Assessment ID:</label>
+                        <input type="text" required />
+
+                    </div>
+                    
+                    <button type="submit">Request Exam End</button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

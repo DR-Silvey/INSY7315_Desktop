@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "R72LnngOe9E=",
+  "dgSpecHash": "KExAHJgCRfs=",
   "success": true,
   "projectFilePath": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\silve\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\silve\\.nuget\\packages\\qrcoder\\1.8.0\\qrcoder.1.8.0.nupkg.sha512",
+    "C:\\Users\\silve\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

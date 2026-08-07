@@ -28,5 +28,11 @@ namespace EDAAMS_Desktop.Controllers
 
         }
 
+        public IActionResult EndAssessment()
+        {
+            return View("AssessmentHosts/EndAssessment");
+
+        }
+
     }
 }

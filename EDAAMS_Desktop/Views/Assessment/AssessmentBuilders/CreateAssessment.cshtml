@@ -22,14 +22,14 @@
     <!--Will Display then exam's ID and then a unique student identifier when the exam is hosted now just a preview-->
     <div id="details">
         <div>
-            <label>Assessment ID:</label>
-            <input />
+            <label>Assessment ID: (Auto Generated)</label>
+            <input type="text" readonly/>
 
         </div>
 
         <div>
-            <label>Student ID:</label>
-            <input />
+            <label>Student ID: (Only Required When Assessment Starts)</label>
+            <input type="text" readonly/>
 
         </div>
 
@@ -38,7 +38,7 @@
     <!--For Loop that reads from db then populates a list of exam questions-->
     @if (1 == 1)
     {
-        <h3>NO QUESTIONS ADDED!!!</h3>
+        <h6>NO QUESTIONS ADDED!!!</h6>
 
     }
 
@@ -61,7 +61,7 @@
 
                 </div>
 
-                <h1>NO QUESTIONS AVAILABLE, Please add one☺.</h1>
+                <h6>NO QUESTIONS AVAILABLE, Please add one☺.</h6>
 
                 <div class="d-flex flex-fill flex-row">
                     <form>
