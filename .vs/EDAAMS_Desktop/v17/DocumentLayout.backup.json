@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|c:\\users\\silve\\desktop\\insy7315\\desktop\\edaams_desktop\\edaams_desktop\\views\\student\\crudstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|solutionrelative:edaams_desktop\\views\\student\\crudstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|c:\\users\\silve\\desktop\\insy7315\\desktop\\edaams_desktop\\edaams_desktop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|solutionrelative:edaams_desktop\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,14 +35,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CRUDStudent.cshtml",
-              "DocumentMoniker": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Student\\CRUDStudent.cshtml",
-              "RelativeDocumentMoniker": "EDAAMS_Desktop\\Views\\Student\\CRUDStudent.cshtml",
-              "ToolTip": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Student\\CRUDStudent.cshtml*",
-              "RelativeToolTip": "EDAAMS_Desktop\\Views\\Student\\CRUDStudent.cshtml*",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAACQAAAAxAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "EDAAMS_Desktop\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "EDAAMS_Desktop\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-07T12:38:50.787Z",
+              "WhenOpened": "2026-08-09T20:20:03.196Z",
               "EditorCaption": ""
             }
           ]

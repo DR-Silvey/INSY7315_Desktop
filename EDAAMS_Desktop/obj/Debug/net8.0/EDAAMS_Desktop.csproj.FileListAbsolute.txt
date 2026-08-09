@@ -32,3 +32,11 @@ C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\obj\Debug\
 C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\obj\Debug\net8.0\EDAAMS_Desktop.pdb
 C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\obj\Debug\net8.0\EDAAMS_Desktop.genruntimeconfig.cache
 C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\obj\Debug\net8.0\ref\EDAAMS_Desktop.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\QRCoder.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\System.Drawing.Common.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\obj\Debug\net8.0\EDAAMS_Desktop.csproj.AssemblyReference.cache
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\obj\Debug\net8.0\EDAAMS_D.C04CCBC8.Up2Date

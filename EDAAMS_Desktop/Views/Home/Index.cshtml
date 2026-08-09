@@ -2,9 +2,17 @@
     ViewData["Title"] = "Home Page";
 }
 
+<!--Contains non interactive display elements-->
+<div class="d-flex flex-column container-fluid flex-fill align-items-center m">
+    <img class="img-fluid h-25 w-25" src="images/logo.png" alt="Edendale Logo"/>
+    <p class="align-self-center h-auto fw-bold">EDENDALE DIGITAL ASSESSMENT AND MARKING SYSTEM</p>
+
+</div>
+
+<br />
 
 <!--DIV Containing the main buttons used to traverse the application-->
-<div class="d-flex flex-row flex-fill container-fluid gap-2" style="overflow-x: auto; overflow-y: hidden;">
+<div class="d-flex flex-row flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">
     <!--Calls Modal that displays Assessment related traversal options-->
     <button data-bs-toggle="modal" data-bs-target="#modalDivAssessments"
             class="d-flex flex-column btn border bg-primary text-white gap-1 col">
@@ -39,10 +47,12 @@
     
 </div>
 
+<br />
+
 <div id="modalDivStudents" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-body d-flex flex-row flex-fill container-fluid gap-2" style="overflow-x: auto; overflow-y: hidden;">               
+            <div class="modal-body d-flex flex-row flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">
                 <a asp-controller="Student" asp-action="Index" class=" d-flex flex-column btn border bg-primary text-white gap-1 col">
 
                     <h1><i class="fa-solid fa-clipboard"></i></h1>
@@ -75,7 +85,7 @@
 <div id="modalDivAssessments" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-body d-flex flex-row flex-fill container-fluid gap-2" style="overflow-x: auto; overflow-y: hidden;">
+            <div class="modal-body d-flex flex-row flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">
                 <a asp-controller="Assessment" asp-action="CreateAssessment" class="d-flex flex-column btn border bg-primary text-white gap-1 col">
 
                     <h1><i class="fa-solid fa-plus"></i></h1>
