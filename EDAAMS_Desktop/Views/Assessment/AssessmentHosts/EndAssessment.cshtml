@@ -3,21 +3,26 @@
 }
 
 <!--Page Displays when an exam has ended, the student shouldn't be bale to exit this page on their own-->
-<h4>YOUR ASSESSMENT'S ALOTTED TIME HAS PASSED</h4>
+<h4 class="alert-danger">YOUR ASSESSMENT'S ALOTTED TIME HAS PASSED</h4>
 
 <div class="d-flex flex-column">
-    <form class="d-flex flex-column">
+    <form class="d-flex flex-column border p-2">
         <label>Enter Termination Code:</label>
         <input />
-        <button>MARKS AS COMPLETE</button>
+
+        <br />
+        <button class="btn">MARKS AS COMPLETE</button>
 
     </form>
 
+    <br />
     <h4>OR</h4>
+    <br />
 
     <!--Hosts a QR that when scanned by a proctors mobile device marks a test as completed and is closed-->
-    <form class="d-flex flex-column">
+    <form class="d-flex flex-column border p-2">
         <label>SCAN QR CODE TO TERMINATE</label>
+        <br />
 
         @if (1==1)
         {

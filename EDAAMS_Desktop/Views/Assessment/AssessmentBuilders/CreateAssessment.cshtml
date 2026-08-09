@@ -2,49 +2,52 @@
     ViewData["Title"] = "Create Assessment Page";
 }
 
-<div id="controls" class="container-fluid d-flex flex-row flex-fill">
-    <div class="d-flex flex-column">
-        <form>
-            <button>FINALISE & SAVE</button>
+<div id="controls" class="container-fluid d-flex flex-row flex-fill align-content-between gap-3">
+    <form>
+        <button class="btn">FINALISE & SAVE</button>
 
-        </form>
+    </form>
 
-        <form>
-            <button>CLEAR ALL</button>
+    <form>
+        <button class="btn">CLEAR ALL</button>
 
-        </form>
-        
-    </div>
+    </form>
     
 </div>
 
-<div id="assessmentPreview" class="container-fluid d-flex flex-column border-1">
+<div id="assessmentPreview" class="container-fluid d-flex flex-column border">    
     <!--Will Display then exam's ID and then a unique student identifier when the exam is hosted now just a preview-->
-    <div id="details">
-        <div>
-            <label>Assessment ID: (Auto Generated)</label>
-            <input type="text" readonly/>
+    <div id="details" class="d-flex flex-row container-fluid flex-fill">
+        <div class="d-flex flex-column">
+            <label>Assessment ID:</label>
+            <input class="w-auto" type="text" placeholder="(Auto Generated)" readonly />
 
         </div>
 
-        <div>
-            <label>Student ID: (Only Required When Assessment Starts)</label>
-            <input type="text" readonly/>
+        <div class="d-flex flex-column">
+            <label>Student ID:</label>
+            <input class="w-auto" type="text" placeholder="(Only Required When Assessment Starts)" readonly />
 
         </div>
 
     </div>
 
-    <!--For Loop that reads from db then populates a list of exam questions-->
-    @if (1 == 1)
-    {
-        <h6>NO QUESTIONS ADDED!!!</h6>
+    <br />
 
-    }
+    <div id="assessmentQuestionBody" class="container-fluid d-flex flex-column h-50" style="overflow-x:hidden; overflow-y: scroll;">
+        <!--For Loop that reads from db then populates a list of exam questions-->
+        @if (1 == 1)
+        {
+            <h6>NO QUESTIONS ADDED!!!</h6>
 
-    <button button data-bs-toggle="modal" data-bs-target="#modalDivQuestions">Add Question</button>
+        }
+
+    </div>
     
 </div>
+
+<br />
+<button class="btn" data-bs-toggle="modal" data-bs-target="#modalDivQuestions">Add Question</button>
 
 <!--Modal Contains a list of available test's the ability to add a new question and the redirection to create a new one-->
 <div id="modalDivQuestions" class="modal fade">
@@ -52,7 +55,7 @@
         <div class="modal-content">
             <div class="modal-body text-start d-flex flex-column justify-content-center">
                 <div class="d-flex flex-fill flex-row">
-                    <button>FILTER</button>
+                    <button class="btn">FILTER</button>
 
                     <select>
                         <option value="">Options:</option>
@@ -61,17 +64,25 @@
 
                 </div>
 
-                <h6>NO QUESTIONS AVAILABLE, Please add one☺.</h6>
+                <div id="availableQuestions" class="container-fluid d-flex flex-column h-50" style="overflow-x:hidden; overflow-y: scroll;">
+                    <!--For Loop that reads from db then populates a list of exam questions-->
+                    @if (1 == 1)
+                    {
+                        <h6>NO QUESTIONS AVAILABLE, Please add one☺.</h6>
 
-                <div class="d-flex flex-fill flex-row">
+                    }
+
+                </div>
+
+                <div class="d-flex flex-fill flex-row align-content-between gap-3">
                     <form>
-                        <button>Add Selected To Exam</button>
+                        <button class="btn">Add Selected To Exam</button>
 
                     </form>
 
                     <!--Redirects the user to the page where they can add a new question to the available pool-->
                     <form asp-controller="Assessment" asp-action="CRUDQuestion">
-                        <button>CREATE NEW QUESTION</button>
+                        <button class="btn">CREATE NEW QUESTION</button>
 
                     </form>
 

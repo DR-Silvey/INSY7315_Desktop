@@ -2,53 +2,60 @@
     ViewData["Title"] = "Start Assessment Page";
 }
 
-<div id="assessmentPreview" class="container-fluid d-flex flex-column border-1">
-    <!--Will Display then exam's ID and then a unique student identifier when the xam is hosted now just a preview-->
-    <div id="details" class="d-flex flex-row">
+<div id="assessmentPreview" class="container-fluid d-flex flex-column border p-2">
+    <!--Will Display then exam's ID and then a unique student identifier when the exam is hosted now just a preview-->
+    <div id="details" class="d-flex flex-row container-fluid flex-fill">
         <div class="d-flex flex-column">
-            <h4>Assessment ID:</h4>
-            <input type="text" readonly/>
+            <label>Assessment ID:</label>
+            <input class="w-auto" type="text" readonly />
 
         </div>
 
         <div class="d-flex flex-column">
-            <h4>Student ID:</h4>
-            <input type="text" readonly />
+            <label>Student ID:</label>
+            <input class="w-auto" type="text" readonly/>
 
         </div>
 
-        <button data-bs-toggle="modal" data-bs-target="#modalDivReport">REPORT PROBLEM</button>
+        <button class="btn" data-bs-toggle="modal" data-bs-target="#modalDivReport">REPORT PROBLEM</button>
 
     </div>
 
-    <div class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: auto;">
+    <br />
+
+    <div id="assessmentQuestionBody" class="container-fluid d-flex flex-column h-50 p-2" style="overflow-x:hidden; overflow-y: scroll;">
         <!--For Loop that reads from db then populates a list of exam questions-->
         @if (1 == 1)
         {
-            <h3>NO QUESTIONS ADDED!!!</h3>
+            <h6>NO QUESTIONS ADDED!!!</h6>
 
         }
 
     </div>
-    
-
-    <button data-bs-toggle="modal" data-bs-target="#modalDivRequestExamEnd">Request Exam End</button>
 
 </div>
+    
+<br />
+
+<button class="btn" data-bs-toggle="modal" data-bs-target="#modalDivRequestExamEnd">Request Exam End</button>
 
 <div id="modalDivReport" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body text-start d-flex flex-column justify-content-center">
-                <form class="d-flex flex-column">
+                <form class="d-flex flex-column p-2">
                     <label>Problem Description:</label>
                     <textarea required></textarea>
+
+                    <br />
 
                     <select>
                         <option>Urgency Level <i class="fa-solid fa-arrow-down"></i></option>
                     </select>
 
-                    <button>Submit</button>
+                    <br />
+
+                    <button class="btn">Submit</button>
 
                 </form>
 
@@ -63,17 +70,19 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body text-start d-flex flex-column justify-content-center">
-                <form asp-controller="Assessment" asp-action="EndAssessment" method="post" class="d-flex flex-column">
+                <form asp-controller="Assessment" asp-action="EndAssessment" method="post" class="d-flex flex-column p-2">
                     <h4 class="align-self-start">Final Confirmation:</h4>
 
-                    <div class="d-flex flex-row gap-2">
+                    <div class="d-flex flex-row gap-2 ">
                         <label>Did you finish all Questions?</label>
                         <input type="checkbox" checked/>
 
                     </div>
 
+                    <br />
+
                     <!--Auto Fill-->
-                    <div class="d-flex flex-column text-start">
+                    <div class="d-flex flex-column text-start border p-2">
                         <h6 class="align-self-start">Confirm Details:</h6>
 
                         <label>Student ID:</label>
@@ -84,7 +93,9 @@
 
                     </div>
                     
-                    <button type="submit">Request Exam End</button>
+                    <br />
+
+                    <button class="btn" type="submit">Request Exam End</button>
 
                 </form>
 

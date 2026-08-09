@@ -2,11 +2,12 @@
     ViewData["Title"] = "CRUD Question Page";
 }
 
-<div class="d-flex flex-column">
-    <label>PREVIOUS QUESTIONS</label>
+<div class="d-flex flex-column border p-2">
+
+    <h6 class="align-self-start">PREVIOUS QUESTIONS</h6>
 
     <div class="d-flex flex-fill flex-row">
-        <button>FILTER</button>
+        <button class="btn">FILTER</button>
 
         <select>
             <option value="">Options:</option>
@@ -15,17 +16,27 @@
 
     </div>
 
-    <h1>NO PREVIOUS QUESTIONS AVAILABLE.</h1>
+    <div id="previousQuestions" class="container-fluid d-flex flex-column h-50 p-1 border" style="overflow-x:hidden; overflow-y: scroll;">
+        <!--For Loop that reads from db then populates a list of exam questions-->
+        @if (1 == 1)
+        {
+            <h6>NO PREVIOUS QUESTIONS AVAILABLE.</h6>
+
+        }
+
+    </div>
+
+    <br />
 
     <!--CRUD actions regarding the exam questions available trough this section-->
-    <div class="d-flex flex-fill flex-row">
+    <div class="d-flex flex-fill flex-row align-content-between gap-3">
         <form>
-            <button>Update Question Details</button>
+            <button class="btn">Update Question Details</button>
 
         </form>
 
         <form>
-            <button>Delete</button>
+            <button class="btn">Delete</button>
 
         </form>
 
@@ -33,48 +44,17 @@
 
 </div>
 
-<div class="d-flex flex-column">
-    <label>PREVIOUS QUESTIONS</label>
+<div class="d-flex flex-column p-2 border">
+    <h6 class="align-self-start">Question Details:</h6>
 
-    <div class="d-flex flex-fill flex-row">
-        <button>FILTER</button>
-
-        <select>
-            <option value="">Options:</option>
-
-        </select>
-
-    </div>
-
-    <h1>NO PREVIOUS QUESTIONS AVAILABLE.</h1>
-
-    <!--CRUD actions regarding the exam questions available trough this section-->
-    <div class="d-flex flex-fill flex-row">
-        <form>
-            <button>Update Question Details</button>
-
-        </form>
-
-        <form>
-            <button>Delete Question</button>
-
-        </form>
-
-    </div>
-
-</div>
-
-<div class="d-flex flex-column">
-    <label>Question Details:</label>
-
-    <form class="d-flex flex-fill flex-row" asp-controller="Assessment" asp-action="CreateAssessment">
+    <form class="d-flex flex-fill flex-column" asp-controller="Assessment" asp-action="CreateAssessment">
         <label>Main Question:</label>
-        <input />
+        <input type="text" required/>
 
         <div class="d-flex flex-row">
+            <label>Make MultiChoice? </label>
             <input input type="checkbox" id="multiChoiceCheckbox" />
-            <label>Make MultiChoice?</label>
-
+            
             <!--Al List of the multiple choice questions that shows if the question is multi choice-->
             <div>
 
@@ -82,7 +62,8 @@
 
         </div>
 
-        <button>Add Question to Pool</button>
+        <br />
+        <button class="btn">Add Question to Pool</button>
 
     </form>
 
@@ -97,20 +78,20 @@
 
                 <form>
                     <label>A:</label>
-                    <input />
+                    <input type="text" required />
 
                     <label>B:</label>
-                    <input />
+                    <input type="text" required />
 
                     <label>C:</label>
-                    <input />
+                    <input type="text" required />
 
                     <label>D:</label>
-                    <input />
+                    <input type="text" required />
+
+                    <button class="btn">SAVE QUESTION SCHEMA</button>
 
                 </form>
-
-                <button>SAVE QUESTION SCHEMA</button>
 
             </div>
 
