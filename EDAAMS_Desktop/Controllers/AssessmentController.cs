@@ -22,8 +22,19 @@ namespace EDAAMS_Desktop.Controllers
 
         }
 
-        public IActionResult StartAssessment()
+        public IActionResult StartAssessment(string assID)
         {
+            if (assID != null)
+            {
+                HttpContext.Session.SetString("assID", assID);
+
+            }
+            else
+            {
+                return RedirectToAction("Index", "Home");
+
+            }
+
             return View("AssessmentHosts/StartAssessment");
 
         }

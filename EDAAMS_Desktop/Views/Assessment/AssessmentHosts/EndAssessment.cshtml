@@ -2,6 +2,16 @@
     ViewData["Title"] = "End Assessment Page";
 }
 
+@if (Context.Session.GetString("assID") == null || Context.Session.GetString("stdNum") == null || Context.Session.GetString("role") != "STUDENT")
+{
+    <script>
+        alert("Please Log-In as a student and use the provided controls to start an assessment!!!");
+        window.location.href = '@Url.Action("Index", "Home")';
+
+    </script>
+
+}
+
 <!--Page Displays when an exam has ended, the student shouldn't be bale to exit this page on their own-->
 <h4 class="alert-danger">YOUR ASSESSMENT'S ALOTTED TIME HAS PASSED</h4>
 

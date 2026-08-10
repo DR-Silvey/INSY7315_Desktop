@@ -13,6 +13,8 @@
 
 <!--DIV Containing the main buttons used to traverse the application-->
 <div class="d-flex flex-row flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">
+    @if (Context.Session.GetString("role") == "EDUCATOR")
+    {
     <!--Calls Modal that displays Assessment related traversal options-->
     <button data-bs-toggle="modal" data-bs-target="#modalDivAssessments"
             class="d-flex flex-column btn border gap-1 col">
@@ -29,7 +31,28 @@
         <h1><i class="fa-solid fa-user-graduate"></i></h1>
         <p>Students</p>
 
-    </button>
+        </button>
+
+    }
+    else
+    if (Context.Session.GetString("role") == "STUDENT")
+    {
+        <button data-bs-toggle="modal" data-bs-target="#modalStartAssessment" class="d-flex flex-column btn border gap-1 col">
+
+            <h1><i class="fa-solid fa-hourglass-start"></i></h1>
+            <p>Start Assessment</p>
+
+        </button>
+
+    }
+    else
+    {
+        <script>
+            alert("Please Log-In to make use of our provided functionalities ☺")
+
+        </script>
+
+    }
 
     <a asp-controller="Home" asp-action="Settings" class="d-flex flex-column btn border gap-1 col">
 
@@ -82,7 +105,7 @@
 
 </div>
 
-<div id="modalDivAssessments" class="modal fade">
+<div id="modalStartAssessments" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body d-flex flex-row flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">
@@ -100,12 +123,28 @@
 
                 </a>
 
-                <a asp-controller="Assessment" asp-action="StartAssessment" class="d-flex flex-column btn border gap-1 col">
+            </div>
 
-                    <h1><i class="fa-solid fa-hourglass-start"></i></h1>
-                    <p>Host Assessment</p>
+        </div>
 
-                </a>
+    </div>
+
+</div>
+
+<div id="modalStartAssessment" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body d-flex flex-column flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">
+                <h4>Assessment Details</h4>
+
+                <form class="d-flex flex-column" asp-controller="Assessment" asp-action="StartAssessment" method="post">
+                    <h6>Please Enter the Assessment ID of the Assessment You Wish to Partake in.</h6>
+                    <input name="assID"type="text" required/>
+                    <br />
+
+                    <button class="btn">Start Assessment</button>
+
+                </form>
 
             </div>
 

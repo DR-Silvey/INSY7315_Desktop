@@ -44,7 +44,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-body text-start d-flex flex-column justify-content-center">
-                    @if (1==1)
+                    @if (1==2)
                     {
                         <h4>Log-In Details</h4>
 
@@ -63,13 +63,35 @@
 
                     }
                     else
+                    if (Context.Session.GetString("role") == null)
                     {
-                        <form class="d-flex flex-column p-2">
+                        <!--Inly used for prototype-->
+                        <h4>Log-In Details</h4>
+
+                        <form class="d-flex flex-column p-2" asp-controller="User" asp-action="LogIn" method="post">
+                            <h6>Log In As:</h6>
+                            
+                            <select name="role">
+                                <option value="ecr">EDUCATOR</option>
+                                <option value="std">STUDENT</option>
+                                
+                            </select>
+                            <br />
+
+                            <button type="submit" class="btn">Log In</button>
+                            <a class="a" asp-controller="User" asp-action="CRUDUser">Don't Have an account? Click Here <i class="fa-solid fa-user-secret"></i></a>
+
+                        </form>
+
+                    }
+                    else
+                    {
+                        <form class="d-flex flex-column p-2" asp-controller="User" asp-action="LogOut" method="post">
                             <h4>Logged In</h4>
-                            <h6>WELCOME <strong></strong>, Have a nice day ☺</h6>
+                            <h6>WELCOME <strong>@Context.Session.GetString("role")</strong>, Have a nice day ☺</h6>
 
                             <br />
-                            <button class="btn">Log-Out</button>
+                            <button type="submit" class="btn">Log-Out</button>
 
                         </form>
 

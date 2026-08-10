@@ -40,3 +40,11 @@ C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\
 C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\obj\Debug\net8.0\EDAAMS_Desktop.csproj.AssemblyReference.cache
 C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\obj\Debug\net8.0\EDAAMS_D.C04CCBC8.Up2Date
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\System.Security.Cryptography.Xml.dll
+C:\Users\silve\Desktop\INSY7315\Desktop\EDAAMS_Desktop\EDAAMS_Desktop\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll

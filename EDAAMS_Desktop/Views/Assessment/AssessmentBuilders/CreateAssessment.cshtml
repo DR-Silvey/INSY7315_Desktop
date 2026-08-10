@@ -2,6 +2,16 @@
     ViewData["Title"] = "Create Assessment Page";
 }
 
+@if (Context.Session.GetString("assID") == null || Context.Session.GetString("stdNum") == null || Context.Session.GetString("role") != "STUDENT")
+{
+    <script>
+        alert("Please Log-In as a student and use the provided controls to start an assessment!!!");
+        window.location.href = '@Url.Action("Index", "Home")';
+
+    </script>
+
+}
+
 <div id="controls" class="d-flex flex-row flex-fill align-content-between mb-1 gap-3">
     <form>
         <button class="btn align-self-start">FINALISE & SAVE</button>

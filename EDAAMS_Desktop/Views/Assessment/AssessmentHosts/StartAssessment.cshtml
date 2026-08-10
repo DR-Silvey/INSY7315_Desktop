@@ -2,6 +2,16 @@
     ViewData["Title"] = "Start Assessment Page";
 }
 
+@if (Context.Session.GetString("assID") == null || Context.Session.GetString("stdNum") == null)
+{
+    <script>
+        alert("Please Log-In as a student and use the provided controls to start an assessment!!!");
+        window.location.href = '@Url.Action("Index", "Home")';
+
+    </script>
+
+}
+
 <button class="btn mb-1" data-bs-toggle="modal" data-bs-target="#modalDivReport">REPORT PROBLEM</button>
 
 <div id="assessmentPreview" class="container-fluid d-flex flex-column border p-2">
@@ -10,13 +20,13 @@
     <div id="details" class="d-flex flex-row flex-fill align-content-between gap-3">
         <div class="d-flex flex-column">
             <label>Assessment ID:</label>
-            <input class="w-auto" type="text" readonly />
+            <input class="w-auto" type="text" placeholder="@Context.Session.GetString("assID")" title="@Context.Session.GetString("assID")" readonly />
 
         </div>
 
         <div class="d-flex flex-column">
             <label>Student ID:</label>
-            <input class="w-auto" type="text" readonly/>
+            <input class="w-auto" type="text" placeholder="@Context.Session.GetString("stdNum")" title="@Context.Session.GetString("stdNum")" readonly />
 
         </div>
 
@@ -89,10 +99,10 @@
                         <h6 class="align-self-start">Confirm Details:</h6>
 
                         <label>Student ID:</label>
-                        <input type="text" required />
+                        <input type="text" placeholder="@Context.Session.GetString("stdNum")" title="@Context.Session.GetString("stdNum")" value="@Context.Session.GetString("stdNum")" required />
 
                         <label>Assessment ID:</label>
-                        <input type="text" required />
+                        <input type="text" placeholder="@Context.Session.GetString("assID")" title="@Context.Session.GetString("assID")" value="@Context.Session.GetString("assID")" required />
 
                     </div>
                     
