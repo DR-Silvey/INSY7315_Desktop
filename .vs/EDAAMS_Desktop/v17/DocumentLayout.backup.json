@@ -1,16 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|c:\\users\\silve\\desktop\\insy7315\\desktop\\edaams_desktop\\edaams_desktop\\views\\student\\crudstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|solutionrelative:edaams_desktop\\views\\student\\crudstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|c:\\users\\silve\\desktop\\insy7315\\desktop\\edaams_desktop\\edaams_desktop\\views\\assessment\\assessmenthosts\\startassessment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{31E419E7-B4A9-4FB2-80D1-ECE1AF169BAB}|EDAAMS_Desktop\\EDAAMS_Desktop.csproj|solutionrelative:edaams_desktop\\views\\assessment\\assessmenthosts\\startassessment.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -18,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,32 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "StartAssessment.cshtml",
-              "DocumentMoniker": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Assessment\\AssessmentHosts\\StartAssessment.cshtml",
-              "RelativeDocumentMoniker": "EDAAMS_Desktop\\Views\\Assessment\\AssessmentHosts\\StartAssessment.cshtml",
-              "ToolTip": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Assessment\\AssessmentHosts\\StartAssessment.cshtml",
-              "RelativeToolTip": "EDAAMS_Desktop\\Views\\Assessment\\AssessmentHosts\\StartAssessment.cshtml",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-10T20:37:10.201Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CRUDStudent.cshtml",
-              "DocumentMoniker": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Student\\CRUDStudent.cshtml",
-              "RelativeDocumentMoniker": "EDAAMS_Desktop\\Views\\Student\\CRUDStudent.cshtml",
-              "ToolTip": "C:\\Users\\silve\\Desktop\\INSY7315\\Desktop\\EDAAMS_Desktop\\EDAAMS_Desktop\\Views\\Student\\CRUDStudent.cshtml",
-              "RelativeToolTip": "EDAAMS_Desktop\\Views\\Student\\CRUDStudent.cshtml",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAIwG8AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-10T19:57:58.798Z",
-              "EditorCaption": ""
             }
           ]
         }

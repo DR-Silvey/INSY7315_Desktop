@@ -30,7 +30,10 @@ namespace EDAAMS_Desktop.Controllers
         }
         public IActionResult LogOut()
         {
-            HttpContext.Session.Clear();
+            //Instead of clear we set each session to null
+            HttpContext.Session.SetString("role", "");
+            HttpContext.Session.SetString("stdNum", "");
+
             return RedirectToAction("Index", "Home");
 
         }

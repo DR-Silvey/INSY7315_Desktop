@@ -1,4 +1,7 @@
-﻿@{
+﻿@using EDAAMS_Desktop.Models.AssessmentModels
+@model QuestionVM
+
+@{
     ViewData["Title"] = "Create Assessment Page";
 }
 
@@ -13,12 +16,12 @@
 }
 
 <div id="controls" class="d-flex flex-row flex-fill align-content-between mb-1 gap-3">
-    <form>
-        <button class="btn align-self-start">FINALISE & SAVE</button>
+    <form id="saveAssessment">
+        <button type="submit" class="btn align-self-start">FINALISE & SAVE</button>
 
     </form>
 
-    <form>
+    <form asp-controller="Assessment" asp-action="CreateAssessment" method="post">
         <button class="btn">CLEAR ALL</button>
 
     </form>
@@ -41,16 +44,10 @@
         </div>
 
     </div>
-
     <br />
 
-    <div id="assessmentQuestionBody" class="container-fluid d-flex flex-column h-50" style="overflow-x:hidden; overflow-y: scroll;">
-        <!--For Loop that reads from db then populates a list of exam questions-->
-        @if (1 == 1)
-        {
-            <h6>NO QUESTIONS ADDED!!!</h6>
-
-        }
+    <div id="assessmentQuestionBody" class="container-fluid d-flex flex-column h-50 p-2" style="overflow-x:hidden; overflow-y: scroll;max-height: 25dvh;">
+        <h6 id="noQuestionsMessage">NO QUESTIONS ADDED!!!</h6>
 
     </div>
     
@@ -63,22 +60,66 @@
 <div id="modalDivQuestions" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
-            <div class="modal-body text-start d-flex flex-column justify-content-center">
+            <form class="modal-body text-start d-flex flex-column justify-content-center" method="post">
                 <div class="d-flex flex-fill flex-row align-content-between gap-1 mb-1">
                     <button class="btn">FILTER</button>
 
                     <select>
                         <option value="">Options:</option>
+                        <option>No Filtering Available Within Prototype</option>
 
                     </select>
 
                 </div>
 
-                <div id="availableQuestions" class="container-fluid d-flex flex-column h-50 p-2" style="overflow-x:hidden; overflow-y: scroll;">
+               
+                <div id="availableQuestions" class="container-fluid d-flex flex-column h-50 p-2" style="overflow-x:hidden; overflow-y: scroll;max-height: 25dvh;">
                     <!--For Loop that reads from db then populates a list of exam questions-->
-                    @if (1 == 1)
+                    @if (Model == null)
                     {
                         <h6>NO QUESTIONS AVAILABLE, Please add one☺.</h6>
+
+                    }
+                    else
+                    {
+                        @foreach (var question in Model.Questions)
+                        {
+                            <div class="questionContainer" data-question-number="@question.QuestionNumber">
+                                <div class="d-flex flex-row gap-1">
+                                    <label>SELECT QUESTION</label>
+                                    <input value="@question.QuestionNumber" class="questionCheckbox" type="checkbox" />
+
+                                </div>
+
+                                @if (question.IsMultiChoice)
+                                {
+                                    <div class="d-flex flex-column border m-2">
+                                        <h6 class="mb-1">Example Question @question.QuestionNumber</h6>
+                                        <label>@question.QuestionBody</label>
+
+                                        @foreach (string option in question.Options)
+                                        {
+                                            <label>@option</label>
+                                        }
+
+                                    </div>
+                                    <br />
+
+                                }
+                                else
+                                {
+                                    <div class="d-flex flex-column border m-2">
+                                        <h6 class="mb-1">Example Question @question.QuestionNumber</h6>
+                                        <label>@question.QuestionBody</label>
+                                        <textarea></textarea>
+
+                                    </div>
+                                    <br />
+
+                                }
+                            </div>
+
+                        }
 
                     }
 
@@ -87,22 +128,134 @@
                 <br />
 
                 <div class="d-flex flex-fill flex-row align-content-between gap-3">
-                    <form>
-                        <button class="btn">Add Selected To Exam</button>
+                    <button type="button" id="addSelectedQuestions" class="btn">
+                        Add Selected To Exam
+                    </button>
 
-                    </form>
-
-                    <!--Redirects the user to the page where they can add a new question to the available pool-->
-                    <form asp-controller="Assessment" asp-action="CRUDQuestion">
-                        <button class="btn">CREATE NEW QUESTION</button>
-
-                    </form>
+                    <!--Redirects the user to the page where they can add a new question to the available pool-->                 
+                    <a asp-controller="Assessment" asp-action="CRUDQuestion"  class="btn">CREATE NEW QUESTION</a>
+                   
 
                 </div>
 
-            </div>
+            </form>
 
         </div>
 
     </div>
 </div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="studentSavedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header" style="background: rgb(0, 99, 0)">
+            <strong class="me-auto text-white">Assessment saved successfully!</strong>
+            <button type="button" class="btn" data-bs-dismiss="toast">CLOSE</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!--Script to load the success Toast-->
+<script>
+    document.getElementById("saveAssessment").addEventListener("submit", function (event) {
+        //Stopping the submit action from triggering
+        event.preventDefault();
+
+        //Displaying the Toast
+        const toastElement = document.getElementById("studentSavedToast");
+        const toast = new bootstrap.Toast(toastElement);
+
+        toast.show();
+
+        //Clearing the Form
+        this.querySelectorAll("input").forEach(input => {
+            if (input.type === "checkbox") {
+                input.checked = false;
+
+            }
+            else
+            if (!input.readOnly) {
+                input.value = "";
+
+            }
+
+        });
+
+    });
+
+</script>
+
+<!--Script to add the Selected question to the div-->
+<script>
+    const selectedQuestions = new Set();
+
+    document.getElementById("addSelectedQuestions")
+        .addEventListener("click", function () {
+            const checkboxes = document.querySelectorAll(".questionCheckbox:checked");
+
+            checkboxes.forEach(function (checkbox) {
+                const questionNumber = checkbox.value;
+
+                //Ensures that there is only 1 instance per question in the div
+                 selectedQuestions.add(questionNumber);
+
+            });
+
+            displaySelectedQuestions();
+
+        });
+
+    function displaySelectedQuestions() {
+        const assessmentBody = document.getElementById("assessmentQuestionBody");
+        const noQuestionsMessage = document.getElementById("noQuestionsMessage");
+
+        //Clears the currently displayed questions
+        assessmentBody
+        .querySelectorAll(".selectedQuestion")
+        .forEach(function (question) {
+        question.remove();
+
+        });
+
+        if (selectedQuestions.size === 0) {
+            noQuestionsMessage.style.display = "block";
+            return;
+
+        }
+
+        noQuestionsMessage.style.display = "none";
+
+        selectedQuestions.forEach(function (questionNumber) {
+            const originalQuestion =
+            document.querySelector(`.questionContainer[data-question-number="${questionNumber}"]`);
+
+            if (!originalQuestion) {
+                return;
+
+            }
+
+            //Creates a duplicate of a question
+            const questionCopy = originalQuestion.cloneNode(true);
+
+            //Takes the select question checkbox away
+            const checkboxSection =questionCopy.querySelector(".questionCheckbox")
+            ?.parentElement;
+
+            if (checkboxSection) {
+                checkboxSection.remove();
+
+            }
+
+            //Shows at the selction end that a question was chosen
+            questionCopy.classList.add("selectedQuestion");
+
+            //Append the selected question to the list
+            assessmentBody.appendChild(questionCopy);
+
+        });
+
+    }
+
+</script>

@@ -7,7 +7,7 @@ namespace EDAAMS_Desktop.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+        
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -16,6 +16,16 @@ namespace EDAAMS_Desktop.Controllers
         public IActionResult Index()
         {
             return View();
+
+        }
+
+        [HttpPost]
+        public IActionResult SetVisited()
+        {
+            //Setting a has visited parameter so that the user is not repromoted to Log-In
+            HttpContext.Session.SetInt32("HaveVisitedHomePage", 1);
+            return View();
+
         }
 
         public IActionResult Privacy()

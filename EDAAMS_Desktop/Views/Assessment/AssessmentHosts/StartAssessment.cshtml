@@ -1,10 +1,11 @@
-﻿@model List<EDAAMS_Desktop.Models.AssessmentModels.AssessmentQuestion>
+﻿@using EDAAMS_Desktop.Models.AssessmentModels
+@model QuestionVM
 
 @{
     ViewData["Title"] = "Start Assessment Page";
 }
 
-@if (Context.Session.GetString("assID") == null || Context.Session.GetString("stdNum") == null)
+@if (Context.Session.GetString("assID") == null || Context.Session.GetString("stdNum") == null || Context.Session.GetString("role") != "STUDENT")
 {
     <script>
         alert("Please Log-In as a student and use the provided controls to start an assessment!!!");
@@ -45,7 +46,7 @@
         }
         else
         {
-            @foreach (var question in Model)
+            @foreach (var question in Model.Questions)
             {
                 @if (question.IsMultiChoice)
                 {

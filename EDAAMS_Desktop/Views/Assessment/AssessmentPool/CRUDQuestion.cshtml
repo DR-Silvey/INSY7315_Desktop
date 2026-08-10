@@ -1,4 +1,7 @@
-﻿@{
+﻿@using EDAAMS_Desktop.Models.AssessmentModels
+@model QuestionVM
+
+@{
     ViewData["Title"] = "CRUD Question Page";
 }
 
@@ -21,16 +24,58 @@
 
         <select>
             <option value="">Options:</option>
+            <option>No Filtering Available Within Prototype</option>
 
         </select>
 
     </div>
 
-    <div id="previousQuestions" class="container-fluid d-flex flex-column h-50 p-2 border" style="overflow-x:hidden; overflow-y: scroll;">
+    <div id="previousQuestions" class="container-fluid d-flex flex-column h-50 p-2" style="overflow-x:hidden; overflow-y: scroll;max-height: 25dvh;">
         <!--For Loop that reads from db then populates a list of exam questions-->
-        @if (1 == 1)
+        @if (Model == null)
         {
-            <h6>NO PREVIOUS QUESTIONS AVAILABLE.</h6>
+            <h6>NO QUESTIONS AVAILABLE, Please add one☺.</h6>
+
+        }
+        else
+        {
+            @foreach (var question in Model.Questions)
+            {
+                <div class="d-flex flex-row gap-1">
+                    <label>SELECT QUESTION</label>
+                    <input type="checkbox" />
+
+                </div>
+
+                @if (question.IsMultiChoice)
+                {
+                    <div class="d-flex flex-column border m-2">
+                        <h6 class="mb-1">Example Question @question.QuestionNumber</h6>
+                        <label>@question.QuestionBody</label>
+
+                        @foreach (string option in question.Options)
+                        {
+                            <label>@option</label>
+                        }
+
+                    </div>
+                    <br />
+
+                }
+                else
+                {
+                    <div class="d-flex flex-column border m-2">
+                        <h6 class="mb-1">Example Question @question.QuestionNumber</h6>
+                        <label>@question.QuestionBody</label>
+                        <textarea></textarea>
+
+
+                    </div>
+                    <br />
+
+                }
+
+            }
 
         }
 
@@ -58,76 +103,88 @@
 <div class="d-flex flex-column p-2 border">
     <h6 class="align-self-start">Question Details:</h6>
 
-    <form class="d-flex flex-fill flex-column" asp-controller="Assessment" asp-action="CreateAssessment">
+    <form id="addQuestionDiv" class="d-flex flex-fill flex-column">
         <label>Main Question:</label>
         <input type="text" required/>
 
-        <div class="d-flex flex-row align-content-between gap-1">
+        <div class="d-flex flex-row align-content-between gap-1 mt-1">
             <label>Make MultiChoice? </label>
-            <input input type="checkbox" id="multiChoiceCheckbox" />
+            <input type="checkbox" id="multiChoiceCheckbox" />
             
-            <!--A List of the multiple choice questions that shows if the question is multi choice-->
-            @if (1==1)
-            {
-                
-            }
-
         </div>
 
-        <br />
+        <!--A List of the multiple choice questions that shows if the question is multi choice-->
+        <div id="multiChoiceDiv" class="d-flex flex-column h-50 p-2 gap-1 border" hidden style="overflow-x:hidden; overflow-y: scroll; max-height: 10dvh;">
+            <div class="d-flex flex-row gap-1">
+                <label>A</label>
+                <input type="text"/>
 
-        <button class="btn">Add Question to Pool</button>
+            </div>
 
-    </form>
+            <div class="d-flex flex-row gap-1">
+                <label>B</label>
+                <input type="text"/>
 
-</div>
+            </div>
 
-<!--Modal Contains a list of the multichoice questions the user adds-->
-<div id="modalDivQuestions" class="modal fade">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body text-start d-flex flex-column justify-content-center">
-                <h3>Multi Choice Questions:</h3>
+            <div class="d-flex flex-row gap-1">
+                <label>C</label>
+                <input type="text"/>
 
-                <form class="d-flex flex-column">
-                    <label>A:</label>
-                    <input type="text" required />
+            </div>
 
-                    <label>B:</label>
-                    <input type="text" required />
-
-                    <label>C:</label>
-                    <input type="text" required />
-
-                    <label>D:</label>
-                    <input type="text" required />
-                    <br />
-
-                    <button class="btn">SAVE QUESTION SCHEMA</button>
-
-                </form>
+            <div class="d-flex flex-row gap-1">
+                <label>D</label>
+                <input type="text" required />
 
             </div>
 
         </div>
 
+        <br />
+
+        <button type="submit" class="btn">Add Question to Pool</button>
+
+    </form>
+
+</div>
+<br />
+
+<a asp-controller="Assessment" asp-action="CreateAssessment" class="btn">GO BACK TO CREATE ASSESSMENT</a>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="studentSavedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header" style="background: rgb(0, 99, 0)">
+            <strong class="me-auto text-white">Question saved successfully!</strong>
+            <button type="button" class="btn" data-bs-dismiss="toast">CLOSE</button>
+
+        </div>
+
     </div>
+
 </div>
 
-
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("addQuestionDiv").addEventListener("submit", function (event) {
+        //Stopping the submit action from triggering
+        event.preventDefault();
 
-        const checkbox = document.getElementById("multiChoiceCheckbox");
-        const modalElement = document.getElementById("modalDivQuestions");
-        const modal = new bootstrap.Modal(modalElement);
+        //Displaying the Toast
+        const toastElement = document.getElementById("studentSavedToast");
+        const toast = new bootstrap.Toast(toastElement);
 
-        checkbox.addEventListener("change", function () {
+        toast.show();
 
-            if (this.checked) {
-                modal.show();
-            } else {
-                modal.hide();
+        //Clearing the Form
+        this.querySelectorAll("input").forEach(input => {
+            if (input.type === "checkbox") {
+                input.checked = false;
+
+            }
+            else
+            if (!input.readOnly) {
+                input.value = "";
+
             }
 
         });
