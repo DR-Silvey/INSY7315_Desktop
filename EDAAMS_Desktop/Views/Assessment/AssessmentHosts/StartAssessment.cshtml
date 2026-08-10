@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<EDAAMS_Desktop.Models.AssessmentModels.AssessmentQuestion>
+
+@{
     ViewData["Title"] = "Start Assessment Page";
 }
 
@@ -20,13 +22,13 @@
     <div id="details" class="d-flex flex-row flex-fill align-content-between gap-3">
         <div class="d-flex flex-column">
             <label>Assessment ID:</label>
-            <input class="w-auto" type="text" placeholder="@Context.Session.GetString("assID")" title="@Context.Session.GetString("assID")" readonly />
+            <input class="w-auto" type="text" placeholder="@Context.Session.GetString("assID")" title="@Context.Session.GetString("assID")" value="@Context.Session.GetString("assID")" readonly />
 
         </div>
 
         <div class="d-flex flex-column">
             <label>Student ID:</label>
-            <input class="w-auto" type="text" placeholder="@Context.Session.GetString("stdNum")" title="@Context.Session.GetString("stdNum")" readonly />
+            <input class="w-auto" type="text" placeholder="@Context.Session.GetString("stdNum")" title="@Context.Session.GetString("stdNum")" value="@Context.Session.GetString("stdNum")" readonly />
 
         </div>
 
@@ -34,14 +36,51 @@
 
     <br />
 
-    <div id="assessmentQuestionBody" class="container-fluid d-flex flex-column h-50 p-2" style="overflow-x:hidden; overflow-y: scroll;">
+    <div id="assessmentQuestionBody" class="container-fluid d-flex flex-column h-50 p-2" style="overflow-x:hidden; overflow-y: scroll;max-height: 25dvh;">
         <!--For Loop that reads from db then populates a list of exam questions-->
-        @if (1 == 1)
+        @if (Model == null)
         {
             <h6>NO QUESTIONS ADDED!!!</h6>
 
         }
+        else
+        {
+            @foreach (var question in Model)
+            {
+                @if (question.IsMultiChoice)
+                {
+                    <div class="d-flex flex-column">
+                        <h6 class="mb-1">Question @question.QuestionNumber</h6>
+                        <label>@question.QuestionBody</label>
 
+                        @foreach(string option in question.Options)
+                        {
+                            <label>@option</label>   
+                        }
+
+                    </div>
+                    <br />
+
+                }
+                else
+                {
+                    <div class="d-flex flex-column">
+                        <h6 class="mb-1">Question @question.QuestionNumber</h6>
+                        <label>@question.QuestionBody</label>
+                        <textarea></textarea>
+
+
+                    </div>
+                    <br />
+                    
+                }
+
+            }
+
+            <h6>END OF EXAM ☺</h6>
+
+        }
+        
     </div>
 
 </div>
@@ -54,7 +93,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body text-start d-flex flex-column justify-content-center">
-                <form class="d-flex flex-column p-2">
+                <form class="d-flex flex-column p-2" method="post">
                     <label>Problem Description:</label>
                     <textarea required></textarea>
 
@@ -68,7 +107,10 @@
 
                     <br />
 
-                    <button class="btn">Submit</button>
+                    <button type="submit" class="btn">Submit</button>
+
+                    <input name="stdNum" value="@Context.Session.GetString("stdNum")" type="hidden" required />
+                    <input name="assID" value="@Context.Session.GetString("assID")" type="hidden" required />
 
                 </form>
 
