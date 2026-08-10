@@ -2,8 +2,9 @@
     ViewData["Title"] = "CRUD Student Page";
 }
 
-<div id="studentDetails" class="d-flex flex-column container-fluid">
+<div id="studentDetails" class="d-flex flex-column container-fluid border p-2">
     <h4 class="align-self-start">New Student Details</h4>
+    <br />
 
     <label>Student ID:</label>
     <input class="disabled" type="text" readonly />
@@ -16,11 +17,12 @@
 
     <label>Current Grade Average:</label>
     <input class="disabled" type="number" required />
+    <br />
 
     <!--Displays a list of available subjects with corresponding inputs and checkboxes to save the student's details-->
     <label>Subjects Taken:</label>
-    <div class="d-flex flex-column">
-        <div id="availableSubjects" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: auto;">
+    <div class="d-flex flex-column border">
+        <div id="availableSubjects" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: scroll;">
             @if (1 == 1)
             {
                 <h6>No Subjects Uploaded yet</h6>
@@ -28,13 +30,14 @@
             }
 
         </div>
+        <br />
 
-        <button type="button" data-bs-toggle="modal" data-bs-target="#modalDivAddSubject">Upload New Subjects</button>
+        <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#modalDivAddSubject">Upload New Subjects</button>
 
     </div>
-    
+    <br />
 
-    <button type="submit" class="d-flex flex-fill">Add New Student <i class="fa-solid fa-user-graduate"></i><i class="fa-solid fa-plus"></i></button>
+    <button type="submit" class="d-flex flex-fill btn">Add New Student <i class="fa-solid fa-user-graduate"></i><i class="fa-solid fa-plus"></i></button>
 
 </div>
 
@@ -51,8 +54,9 @@
                     <input type="text" required />
                     <label>Minimum Passing Grade:</label>
                     <input type="number" required />
+                    <br />
 
-                    <button>Add Subject</button>
+                    <button class="btn">Add Subject</button>
 
                 </form>
 

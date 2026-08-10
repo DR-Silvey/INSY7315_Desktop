@@ -72,12 +72,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3R1ZGVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/User/LogIn.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxMb2dJbi5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/User/SignUp.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxTaWduVXAuY3NodG1s
+[C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/User/CRUDUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDUlVEVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/silve/Desktop/INSY7315/Desktop/EDAAMS_Desktop/EDAAMS_Desktop/Views/_ViewImports.cshtml]
