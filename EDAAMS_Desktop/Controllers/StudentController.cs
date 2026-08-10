@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EDAAMS_Desktop.Models.StudentModels;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EDAAMS_Desktop.Controllers
 {
@@ -11,7 +12,9 @@ namespace EDAAMS_Desktop.Controllers
 
         public IActionResult CRUDStudent()
         {
-            return View();
+            var vm = new StudentSubjectVM();
+
+            return View(vm);
         }
 
     }

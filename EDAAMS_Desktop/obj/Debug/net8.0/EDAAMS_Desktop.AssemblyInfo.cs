@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EDAAMS_Desktop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b269b29af4f414332e937a6646bc36c0dab753ce")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+20a56216e82c8128f38cd1cafbcaba638d119139")]
 [assembly: System.Reflection.AssemblyProductAttribute("EDAAMS_Desktop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EDAAMS_Desktop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

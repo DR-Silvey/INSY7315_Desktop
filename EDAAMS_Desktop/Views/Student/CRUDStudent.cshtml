@@ -1,4 +1,7 @@
-﻿@{
+﻿@using EDAAMS_Desktop.Models.StudentModels
+@model StudentSubjectVM
+
+@{
     ViewData["Title"] = "CRUD Student Page";
 }
 
@@ -16,26 +19,52 @@
     <h4 class="align-self-start">New Student Details</h4>
    
     <label>Student ID:</label>
-    <input class="disabled" type="text" readonly />
+    <input type="text" value="AUTO GENERATED" readonly />
 
     <label>Student Full Name:</label>
-    <input class="disabled" type="text" required />
+    <input type="text" required />
 
     <label>Current Year of Study:</label>
-    <input class="disabled" type="text" required />
+    <input type="number" required />
 
     <label>Current Grade Average:</label>
-    <input class="disabled" type="number" required />
+    <input type="number" required />
     <br />
 
     <!--Displays a list of available subjects with corresponding inputs and checkboxes to save the student's details-->
     <label>Subjects Taken:</label>
     <div class="d-flex flex-column border p-2">
-        <div id="availableSubjects" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: scroll;">
-            @if (1 == 1)
+        <div id="availableSubjects" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: scroll;max-height: 12dvh;">
+            @if (Model == null)
             {
                 <h6>No Subjects Uploaded yet</h6>
 
+            }
+            else
+            {
+
+                <table>
+                    <tr>
+                        <th>Subject Name</th>
+                        <th>Subject Code</th>
+                        <th>Minimum Passing Grade</th>
+                        <th>Add To Student</th>
+                    </tr>
+
+                    @foreach (var subject in Model.Subjects)
+                    {
+                        <tr style="overflow-x:hidden; overflow-y: scroll; max-height: 15dvh;">
+                            <td>@subject.SubjectName</td>
+                            <td>@subject.SubjectCode</td>
+                            <td>@subject.MinPassingGrade</td>
+                            <td><input name="@subject.SubjectCode" type="checkbox" /></td>
+
+                        </tr>                  
+
+                    }
+
+                </table>
+                
             }
 
         </div>
@@ -46,7 +75,7 @@
     </div>
     <br />
 
-    <button type="submit" class="d-flex flex-fill btn">Add New Student <i class="fa-solid fa-user-graduate"></i><i class="fa-solid fa-plus"></i></button>
+    <button type="submit" class="btn align-items-center">Add New Student<br /><i class="fa-solid fa-plus"></i><i class="fa-solid fa-user-graduate"></i></button>
 
 </form>
 
@@ -76,3 +105,42 @@
     </div>
 
 </div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="studentSavedToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header" style="background: rgb(0, 99, 0)">
+            <strong class="me-auto text-white">Student saved successfully!</strong>
+            <button type="button" class="btn" data-bs-dismiss="toast">CLOSE</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    document.getElementById("studentDetails").addEventListener("submit", function (event) {
+        //Stopping the submit action from triggering
+        event.preventDefault();
+
+        //Displaying the Toast
+        const toastElement = document.getElementById("studentSavedToast");
+        const toast = new bootstrap.Toast(toastElement);
+
+        toast.show();
+
+        //Clearing the Form
+        this.querySelectorAll("input").forEach(input => {
+            if (input.type === "checkbox") {
+                input.checked = false;
+
+            }
+            else if (!input.readOnly) {
+                input.value = "";
+
+            }
+        });
+
+    });
+
+</script>
