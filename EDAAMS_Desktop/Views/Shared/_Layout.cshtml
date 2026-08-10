@@ -66,7 +66,7 @@
                     if (Context.Session.GetString("role") == null)
                     {
                         <!--Inly used for prototype-->
-                        <h4>Log-In Details</h4>
+                        <h4>Log-In Details (Prototype Version)</h4>
 
                         <form class="d-flex flex-column p-2" asp-controller="User" asp-action="LogIn" method="post">
                             <h6>Log In As:</h6>
@@ -74,6 +74,7 @@
                             <select name="role">
                                 <option value="ecr">EDUCATOR</option>
                                 <option value="std">STUDENT</option>
+                                <option value="adn">ADMIN</option>
                                 
                             </select>
                             <br />

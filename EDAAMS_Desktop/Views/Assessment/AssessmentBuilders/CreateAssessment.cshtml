@@ -2,10 +2,10 @@
     ViewData["Title"] = "Create Assessment Page";
 }
 
-@if (Context.Session.GetString("assID") == null || Context.Session.GetString("stdNum") == null || Context.Session.GetString("role") != "STUDENT")
+@if (Context.Session.GetString("role") != "EDUCATOR")
 {
     <script>
-        alert("Please Log-In as a student and use the provided controls to start an assessment!!!");
+        alert("Please Log-In as an EDUCATOR to make use of this functionality!!!");
         window.location.href = '@Url.Action("Index", "Home")';
 
     </script>

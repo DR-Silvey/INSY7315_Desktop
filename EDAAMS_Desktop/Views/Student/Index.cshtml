@@ -2,6 +2,16 @@
     ViewData["Title"] = "Student Details Page";
 }
 
+@if (Context.Session.GetString("role") != "EDUCATOR")
+{
+    <script>
+        alert("Please Log-In as an EDUCATOR to make use of this functionality!!!");
+        window.location.href = '@Url.Action("Index", "Home")';
+
+    </script>
+
+}
+
 <div id="studentDetails" class="d-flex flex-column container-fluid border p-2">
     <h4 class="align-self-start">Student Details</h4>
 

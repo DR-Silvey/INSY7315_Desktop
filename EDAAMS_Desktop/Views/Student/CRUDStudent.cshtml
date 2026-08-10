@@ -2,6 +2,16 @@
     ViewData["Title"] = "CRUD Student Page";
 }
 
+@if (Context.Session.GetString("role") != "ADMIN")
+{
+    <script>
+        alert("Please Log-In as an ADMIN to make use of this functionality!!!");
+        window.location.href = '@Url.Action("Index", "Home")';
+
+    </script>
+
+}
+
 <form id="studentDetails" class="d-flex flex-column container-fluid border p-2">
     <h4 class="align-self-start">New Student Details</h4>
    

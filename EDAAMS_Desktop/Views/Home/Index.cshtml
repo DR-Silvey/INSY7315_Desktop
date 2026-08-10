@@ -13,7 +13,7 @@
 
 <!--DIV Containing the main buttons used to traverse the application-->
 <div class="d-flex flex-row flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">
-    @if (Context.Session.GetString("role") == "EDUCATOR")
+    @if (Context.Session.GetString("role") == "EDUCATOR" || Context.Session.GetString("role") == "ADMIN")
     {
     <!--Calls Modal that displays Assessment related traversal options-->
     <button data-bs-toggle="modal" data-bs-target="#modalDivAssessments"
@@ -35,7 +35,7 @@
 
     }
     else
-    if (Context.Session.GetString("role") == "STUDENT")
+    if (Context.Session.GetString("role") == "STUDENT" || Context.Session.GetString("role") == "ADMIN")
     {
         <button data-bs-toggle="modal" data-bs-target="#modalStartAssessment" class="d-flex flex-column btn border gap-1 col">
 
@@ -83,12 +83,16 @@
 
                 </a>
 
-                <a asp-controller="Student" asp-action="CRUDStudent" class="d-flex flex-column btn border gap-1 col">
+                @if(Context.Session.GetString("role") == "ADMIN")
+                {
+                    <a asp-controller="Student" asp-action="CRUDStudent" class="d-flex flex-column btn border gap-1 col">
 
-                    <h1><i class="fa-solid fa-plus"></i></h1>
-                    <p>Create Student</p>
+                        <h1><i class="fa-solid fa-plus"></i></h1>
+                        <p>Create Student</p>
 
-                </a>
+                    </a>
+                      
+                }
 
                 <a asp-controller="Statistics" asp-action="StudentStats" class="d-flex flex-column btn border gap-1 col">
 
@@ -105,7 +109,7 @@
 
 </div>
 
-<div id="modalStartAssessments" class="modal fade">
+<div id="modalDivAssessments" class="modal fade">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body d-flex flex-row flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">

@@ -2,6 +2,26 @@
     ViewData["Title"] = "Student Statistics Page";
 }
 
+@if (Context.Session.GetString("role") != "EDUCATOR")
+{
+    <script>
+        alert("Please Log-In as an EDUCATOR to make use of this functionality!!!");
+        window.location.href = '@Url.Action("Index", "Home")';
+
+    </script>
+
+}
+
+@if (Context.Session.GetString("role") != "EDUCATOR")
+{
+    <script>
+        alert("Please Log-In as an EDUCATOR to make use of this functionality!!!");
+        window.location.href = '@Url.Action("Index", "Home")';
+
+    </script>
+
+}
+
 <form id="topPerforming" class="d-flex flex-column container-fluid border p-2 gap-2">
     <h4 class="align-self-start">Top Performers:</h4>
 
