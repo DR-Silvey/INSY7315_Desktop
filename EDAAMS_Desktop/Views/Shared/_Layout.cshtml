@@ -29,7 +29,8 @@
 
                         <!--Links To Log-In Page-->
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="LogIn">Log-In <i class="fa-solid fa-circle-user"></i></a>
+                            <a class="btn" data-bs-toggle="modal" data-bs-target="#modalDivLogIn">Log-In <i class="fa-solid fa-circle-user"></i></a>
+
                         </li>
 
                     </ul>
@@ -37,6 +38,51 @@
             </div>
         </nav>
     </header>
+
+    <!--Modal used for Logging In-->
+    <div id="modalDivLogIn" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body text-start d-flex flex-column justify-content-center">
+                    @if (1==1)
+                    {
+                        <h4>Log-In Details</h4>
+
+                        <form class="d-flex flex-column p-2">
+                            <label>Username:</label>
+                            <input type="text" required/>
+
+                            <label>Password:</label>
+                            <input type="text" required />
+                            <br />
+
+                            <button class="btn">Log In</button>
+                            <a asp-controller="User" asp-action="CRUDUser">Don't Have an account? Click Here <i class="fa-solid fa-user-secret"></i></a>
+
+                        </form>
+
+                    }
+                    else
+                    {
+                        <form class="d-flex flex-column p-2">
+                            <h4>Logged In</h4>
+                            <h6>WELCOME <strong></strong>, Have a nice day ☺</h6>
+
+                            <br />
+                            <button class="btn">Log-Out</button>
+
+                        </form>
+
+                    }
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()

@@ -4,13 +4,7 @@ namespace EDAAMS_Desktop.Controllers
 {
     public class UserController : Controller
     {
-        public IActionResult LogIn()
-        {
-            return View();
-
-        }
-
-        public IActionResult SignUp()
+        public IActionResult CRUDUser()
         {
             return View();
 

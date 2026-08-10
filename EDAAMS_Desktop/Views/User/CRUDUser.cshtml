@@ -2,4 +2,41 @@
     ViewData["Title"] = "Sign Up Page";
 }
 
-Sign Up
+<form class="d-flex flex-column">
+    <h4 class="align-self-start">Create Account:</h4>
+
+    <div id="mainDetails" class="d-flex flex-column border p-2">
+        <h6>Personal Details:</h6>
+
+        <label>Full Name:</label>
+        <input type="text" required/>
+
+        <label>Email:</label>
+        <input type="email" required />
+
+        <label>Position in School:</label>
+        <select>
+            <option>Options</option>
+        </select>
+
+    </div>
+    <br />
+
+    <div id="mainDetails" class="d-flex flex-column border p-2">
+        <h6>Account Details:</h6>
+
+        <label>UserName:</label>
+        <input type="text" required />
+
+        <label>Password:</label>
+        <input type="password" required />
+
+        <label>Confirm Password:</label>
+        <input type="password" required />
+
+    </div>
+    <br />
+
+    <button class="btn">Create Account</button>
+
+</form>
