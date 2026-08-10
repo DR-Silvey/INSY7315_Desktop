@@ -15,7 +15,7 @@
 <div class="d-flex flex-row flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">
     <!--Calls Modal that displays Assessment related traversal options-->
     <button data-bs-toggle="modal" data-bs-target="#modalDivAssessments"
-            class="d-flex flex-column btn border bg-primary text-white gap-1 col">
+            class="d-flex flex-column btn border gap-1 col">
 
         <h1><i class="fa-solid fa-file"></i></h1>
         <p>Assessments</p>
@@ -24,21 +24,21 @@
 
     <!--Calls Modal that displays Student related traversal options-->
     <button data-bs-toggle="modal" data-bs-target="#modalDivStudents"
-            class="d-flex flex-column btn border bg-primary text-white gap-1 col">
+            class="d-flex flex-column btn border gap-1 col">
 
         <h1><i class="fa-solid fa-user-graduate"></i></h1>
         <p>Students</p>
 
     </button>
 
-    <a asp-controller="Home" asp-action="Settings" class="d-flex flex-column btn border bg-primary text-white gap-1 col">
+    <a asp-controller="Home" asp-action="Settings" class="d-flex flex-column btn border gap-1 col">
 
         <h1><i class="fa-solid fa-gear"></i></h1>
         <p>Settings</p>
 
     </a>
 
-    <a asp-controller="Home" asp-action="Privacy" class="d-flex flex-column btn border bg-primary text-white gap-1 col">
+    <a asp-controller="Home" asp-action="Privacy" class="d-flex flex-column btn border gap-1 col">
 
         <h1><i class="fa-solid fa-shield-halved"></i></h1>
         <p>Privacy</p>
@@ -53,21 +53,21 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body d-flex flex-row flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">
-                <a asp-controller="Student" asp-action="Index" class=" d-flex flex-column btn border bg-primary text-white gap-1 col">
+                <a asp-controller="Student" asp-action="Index" class=" d-flex flex-column btn border gap-1 col">
 
                     <h1><i class="fa-solid fa-clipboard"></i></h1>
                     <p>Student Details</p>
 
                 </a>
 
-                <a asp-controller="Student" asp-action="CRUDStudent" class="d-flex flex-column btn border bg-primary text-white gap-1 col">
+                <a asp-controller="Student" asp-action="CRUDStudent" class="d-flex flex-column btn border gap-1 col">
 
                     <h1><i class="fa-solid fa-plus"></i></h1>
                     <p>Create Student</p>
 
                 </a>
 
-                <a asp-controller="Statistics" asp-action="StudentStats" class="d-flex flex-column btn border bg-primary text-white gap-1 col">
+                <a asp-controller="Statistics" asp-action="StudentStats" class="d-flex flex-column btn border gap-1 col">
 
                     <h1><i class="fa-solid fa-chart-simple"></i></h1>
                     <p>StudentStatistics</p>
@@ -86,21 +86,21 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body d-flex flex-row flex-fill container-fluid align-content-between gap-3" style="overflow-x: auto; overflow-y: hidden;">
-                <a asp-controller="Assessment" asp-action="CreateAssessment" class="d-flex flex-column btn border bg-primary text-white gap-1 col">
+                <a asp-controller="Assessment" asp-action="CreateAssessment" class="d-flex flex-column btn border gap-1 col">
 
                     <h1><i class="fa-solid fa-plus"></i></h1>
                     <p>Create Assessment</p>
 
                 </a>
 
-                <a asp-controller="Assessment" asp-action="MarkAssessment" class="d-flex flex-column btn border bg-primary text-white gap-1 col">
+                <a asp-controller="Assessment" asp-action="MarkAssessment" class="d-flex flex-column btn border gap-1 col">
 
                     <h1><i class="fa-solid fa-list-check"></i></h1>
                     <p>Mark Assessment</p>
 
                 </a>
 
-                <a asp-controller="Assessment" asp-action="StartAssessment" class="d-flex flex-column btn border bg-primary text-white gap-1 col">
+                <a asp-controller="Assessment" asp-action="StartAssessment" class="d-flex flex-column btn border gap-1 col">
 
                     <h1><i class="fa-solid fa-hourglass-start"></i></h1>
                     <p>Host Assessment</p>

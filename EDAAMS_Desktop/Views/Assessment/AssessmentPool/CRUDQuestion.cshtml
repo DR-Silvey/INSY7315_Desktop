@@ -6,7 +6,7 @@
 
     <h6 class="align-self-start">PREVIOUS QUESTIONS</h6>
 
-    <div class="d-flex flex-fill flex-row">
+    <div class="d-flex flex-fill flex-row align-content-between gap-1 mb-1">
         <button class="btn">FILTER</button>
 
         <select>
@@ -16,7 +16,7 @@
 
     </div>
 
-    <div id="previousQuestions" class="container-fluid d-flex flex-column h-50 p-1 border" style="overflow-x:hidden; overflow-y: scroll;">
+    <div id="previousQuestions" class="container-fluid d-flex flex-column h-50 p-2 border" style="overflow-x:hidden; overflow-y: scroll;">
         <!--For Loop that reads from db then populates a list of exam questions-->
         @if (1 == 1)
         {
@@ -43,6 +43,7 @@
     </div>
 
 </div>
+<br />
 
 <div class="d-flex flex-column p-2 border">
     <h6 class="align-self-start">Question Details:</h6>
@@ -51,18 +52,20 @@
         <label>Main Question:</label>
         <input type="text" required/>
 
-        <div class="d-flex flex-row">
+        <div class="d-flex flex-row align-content-between gap-1">
             <label>Make MultiChoice? </label>
             <input input type="checkbox" id="multiChoiceCheckbox" />
             
-            <!--Al List of the multiple choice questions that shows if the question is multi choice-->
-            <div>
-
-            </div>
+            <!--A List of the multiple choice questions that shows if the question is multi choice-->
+            @if (1==1)
+            {
+                
+            }
 
         </div>
 
         <br />
+
         <button class="btn">Add Question to Pool</button>
 
     </form>
@@ -76,7 +79,7 @@
             <div class="modal-body text-start d-flex flex-column justify-content-center">
                 <h3>Multi Choice Questions:</h3>
 
-                <form>
+                <form class="d-flex flex-column">
                     <label>A:</label>
                     <input type="text" required />
 
@@ -88,6 +91,7 @@
 
                     <label>D:</label>
                     <input type="text" required />
+                    <br />
 
                     <button class="btn">SAVE QUESTION SCHEMA</button>
 

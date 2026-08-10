@@ -2,10 +2,9 @@
     ViewData["Title"] = "CRUD Student Page";
 }
 
-<div id="studentDetails" class="d-flex flex-column container-fluid border p-2">
+<form id="studentDetails" class="d-flex flex-column container-fluid border p-2">
     <h4 class="align-self-start">New Student Details</h4>
-    <br />
-
+   
     <label>Student ID:</label>
     <input class="disabled" type="text" readonly />
 
@@ -21,7 +20,7 @@
 
     <!--Displays a list of available subjects with corresponding inputs and checkboxes to save the student's details-->
     <label>Subjects Taken:</label>
-    <div class="d-flex flex-column border">
+    <div class="d-flex flex-column border p-2">
         <div id="availableSubjects" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: scroll;">
             @if (1 == 1)
             {
@@ -39,7 +38,7 @@
 
     <button type="submit" class="d-flex flex-fill btn">Add New Student <i class="fa-solid fa-user-graduate"></i><i class="fa-solid fa-plus"></i></button>
 
-</div>
+</form>
 
 <div id="modalDivAddSubject" class="modal fade">
     <div class="modal-dialog">

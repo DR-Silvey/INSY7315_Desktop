@@ -2,9 +2,12 @@
     ViewData["Title"] = "Start Assessment Page";
 }
 
+<button class="btn mb-1" data-bs-toggle="modal" data-bs-target="#modalDivReport">REPORT PROBLEM</button>
+
 <div id="assessmentPreview" class="container-fluid d-flex flex-column border p-2">
+
     <!--Will Display then exam's ID and then a unique student identifier when the exam is hosted now just a preview-->
-    <div id="details" class="d-flex flex-row container-fluid flex-fill">
+    <div id="details" class="d-flex flex-row flex-fill align-content-between gap-3">
         <div class="d-flex flex-column">
             <label>Assessment ID:</label>
             <input class="w-auto" type="text" readonly />
@@ -16,8 +19,6 @@
             <input class="w-auto" type="text" readonly/>
 
         </div>
-
-        <button class="btn" data-bs-toggle="modal" data-bs-target="#modalDivReport">REPORT PROBLEM</button>
 
     </div>
 
@@ -47,10 +48,12 @@
                     <label>Problem Description:</label>
                     <textarea required></textarea>
 
-                    <br />
-
-                    <select>
+                    <select class="mt-1">
                         <option>Urgency Level <i class="fa-solid fa-arrow-down"></i></option>
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+
                     </select>
 
                     <br />

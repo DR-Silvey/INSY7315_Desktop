@@ -75,14 +75,14 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body d-flex flex-column flex-fill container-fluid gap-2">
-                <form id="uploadedAssessmentPages" class="d-flex flex-column">
-                    <h4 class="align-self-start">Uploaded Pages</h4>
-                    <div id="uploadedAssessmentPagesViewer" class="d-flex flex-column container-fluid" style="overflow-x:hidden; overflow-y: auto;">
+                <h4 class="align-self-start">Uploaded Pages</h4>
+
+                <form id="uploadedAssessmentPages" class="d-flex flex-column gap-1">
+                    <div id="uploadedAssessmentPagesViewer" class="d-flex flex-column container-fluid" style="overflow-x:scroll; overflow-y: scroll;">
 
                     </div>
 
-                    <div class="d-flex flex-row">
-                        <label for="imgUpload"></label>
+                    <div class="d-flex flex-row align-content-between gap-3">
                         <input class="btn" id="imgUpload" type="file"/>
 
                         <button class="btn">Upload Image <i class="fa-solid fa-image"></i></button>
@@ -104,7 +104,7 @@
                         <label>Marked Grade (if applicable):</label>
                         <input type="number"/>
 
-                        <div class="d-flex flex-row">
+                        <div class="d-flex flex-row gap-1">
                             <label>AUTO MARK TEST </label>
                             <input type="checkbox" />
 
