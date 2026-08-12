@@ -10,7 +10,7 @@
         public int GradeAvg { get; set; }
 
         //List of te Subjects the student takes
-        public List<Subject> Subjects { get; set; }
+        public List<Subject>? Subjects { get; set; }
 
     }
 }

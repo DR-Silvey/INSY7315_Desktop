@@ -18,10 +18,10 @@
 <div class="d-flex flex-column">
     <form class="d-flex flex-column border p-2">
         <label>Enter Termination Code:</label>
-        <input />
+        <input value="trmnt12345678" readonly/>
 
         <br />
-        <button class="btn">MARKS AS COMPLETE</button>
+        <a asp-controller="Home" asp-action="Index" class="btn">MARKS AS COMPLETE</a>
 
     </form>
 
@@ -34,9 +34,9 @@
         <label>SCAN QR CODE TO TERMINATE</label>
         <br />
 
-        @if (1==1)
+        @if (1 == 1)
         {
-            <h6>NO Code Generated!!!</h6>
+            <h6>NO Code Generated (Non Prototype Only)</h6>
 
         }
 

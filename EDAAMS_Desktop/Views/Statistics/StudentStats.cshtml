@@ -28,7 +28,7 @@
     <div id="availableTopPerformersViewer" class="d-flex flex-column container-fluid border p-2" style="overflow-x:hidden; overflow-y: scroll;">
         @if (1 == 1)
         {
-            <h6>No Grades/Students Uploaded yet</h6>
+            <h6>No Grades/Students Uploaded yet (Not Available In Prototype)</h6>
 
         }
 
@@ -46,7 +46,7 @@
     <h4 class="align-self-start">Grade Averages</h4>
 
     <div id="studentDetailsViewer" class="d-flex flex-column container-fluid  border p-2" style="overflow-x:hidden; overflow-y: scroll;">
-        @if (1 == 1)
+        @if (1 != 1)
         {
             <h6>No Grades/Students Uploaded yet</h6>
 
@@ -54,37 +54,56 @@
         else
         {
             <!--Graphing to show how averages have changes over a time period-->
+            <div style="height: 25dvh; width: 100%;">
+                <canvas id="gradeAverageChart"></canvas>
+            </div>
 
         }
 
     </div>
     <br />
 
-    <div class="d-flex flex-column container-fluid gap-2">
-        <div class="d-flex flex-row gap-1">
-            <label>X-Axis: </label>
-            <select>
-                <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+    <div class="d-flex flex-row gap-2">
+        <div class="d-flex flex-column align-content-between gap-2">
+            <div class="d-flex flex-row gap-1">
+                <label>X-Axis: </label>
+                <select>
+                    <option>Month</option>
 
-            </select>
+                </select>
+
+            </div>
+
+            <div class="d-flex flex-row gap-1">
+                <label>Ratio X-Axis: </label>
+                <select>
+                    <option>1:1</option>
+
+                </select>
+
+            </div>
 
         </div>
+        <br />
 
-        <div class="d-flex flex-row gap-1">
-            <label>X-Axis: </label>
-            <select>
-                <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+        <div class="d-flex flex-column align-content-between gap-2">
+            <div class="d-flex flex-row gap-1">
+                <label>Y-Axis: </label>
+                <select>
+                    <option>AVG Grade</option>
 
-            </select>
+                </select>
 
-        </div>
+            </div>
 
-        <div class="d-flex flex-row gap-1">
-            <label>Y-Axis: </label>
-            <select>
-                <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+            <div class="d-flex flex-row gap-1">
+                <label>Ratio Y-Axis: </label>
+                <select>
+                    <option>1:50</option>
 
-            </select>
+                </select>
+
+            </div>
 
         </div>
 
@@ -102,6 +121,7 @@
                 <form class="d-flex flex-column">
                     <select>
                         <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+                        <option>No Filtering Available Within Prototype</option>
 
                     </select>
                     <br />
@@ -121,3 +141,60 @@
     </div>
 
 </div>
+
+<script>
+    const ctx = document.getElementById('gradeAverageChart');
+
+    new Chart(ctx, {
+        type: 'line',
+            data: {
+                labels: [
+                    'January',
+                    'February',
+                    'March',
+                    'April',
+                    'May',
+                    'June'
+
+                ],
+
+                datasets: [{
+                    label: 'Average Grade',
+                    data: [62, 67, 65, 71, 74, 78],
+                    borderWidth: 2,
+                    tension: 0.3,
+                    fill: false
+
+                }]
+            },
+
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+
+                        title: {
+                            display: true,
+                            text: 'Average Grade (%)'
+
+                        }
+                    },
+
+                    x: 
+                    {
+                        title: 
+                        {
+                            display: true,
+                            text: 'Month'
+                        }
+                    }
+                }
+            }
+
+    });
+
+</script>

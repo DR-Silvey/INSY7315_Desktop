@@ -17,5 +17,15 @@ namespace EDAAMS_Desktop.Controllers
             return View(vm);
         }
 
+        [HttpGet]
+        public IActionResult FindStudent(string studID)
+        {
+            //Note- Use an actual LINQ query to find and return then correct student
+            var vm = new StudentSubjectVM();
+
+            return View("Index", vm);
+
+        }
+
     }
 }

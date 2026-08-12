@@ -126,7 +126,7 @@
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body text-start d-flex flex-column justify-content-center">
-                <form asp-controller="Assessment" asp-action="EndAssessment" method="post" class="d-flex flex-column p-2">
+                <form asp-controller="Assessment" asp-action="GenerateQRCode" method="post" class="d-flex flex-column p-2">
                     <h4 class="align-self-start">Final Confirmation:</h4>
 
                     <div class="d-flex flex-row gap-2 ">
@@ -146,6 +146,9 @@
 
                         <label>Assessment ID:</label>
                         <input type="text" placeholder="@Context.Session.GetString("assID")" title="@Context.Session.GetString("assID")" value="@Context.Session.GetString("assID")" required />
+
+                        <!--Example Termination Qr code input-->
+                        <input name="terminationCode" value="terminate" type="hidden" hidden readonly />
 
                     </div>
                     

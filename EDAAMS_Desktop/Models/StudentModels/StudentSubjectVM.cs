@@ -46,7 +46,14 @@
 
         };
 
-        public List<Student> Students { get; set; } = new();
+        public Student Student { get; set; } = new()
+        {
+            StudentID = "ST12345678",
+            StudentFullName = "Koos Konfyt",
+            CurrentYearOfStudy = 10,
+            GradeAvg = 72
+
+        };
 
     }
 }

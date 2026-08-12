@@ -1,5 +1,6 @@
 ﻿using EDAAMS_Desktop.Models.AssessmentModels;
 using Microsoft.AspNetCore.Mvc;
+using QRCoder;
 
 namespace EDAAMS_Desktop.Controllers
 {
@@ -20,7 +21,7 @@ namespace EDAAMS_Desktop.Controllers
             return View("AssessmentPool/CRUDQuestion", vm);
 
         }
-        
+
         public IActionResult MarkAssessment()
         {
             return View("AssessmentMarking/MarkAssessment");
@@ -50,6 +51,33 @@ namespace EDAAMS_Desktop.Controllers
 
         public IActionResult EndAssessment()
         {
+            return View("AssessmentHosts/EndAssessment");
+
+        }
+
+        //Generates the QR code used to END an ASSESSMENT ()
+        [HttpPost]
+        public IActionResult GenerateQRCode(string terminationCode)
+        {
+            using (QRCodeGenerator qRCodeGenerator = new QRCodeGenerator())
+            {
+                using (QRCodeData qrData = qRCodeGenerator.CreateQrCode(terminationCode, QRCodeGenerator.ECCLevel.Q))
+                {
+                    using (PngByteQRCode qrCode = new PngByteQRCode(qrData))
+                    {
+                        //Setting the QR Code to be a certain pixels per module size
+                        byte[] qrCodeByteArr = qrCode.GetGraphic(20);
+
+                        //Conversion and injection into HTML view
+                        string b64String = Convert.ToBase64String(qrCodeByteArr);
+                        ViewBag.QRCode = "data:image/png;base64," + b64String;
+
+                    }
+
+                }
+
+            }
+
             return View("AssessmentHosts/EndAssessment");
 
         }

@@ -1,4 +1,7 @@
-﻿@{
+﻿@using EDAAMS_Desktop.Models.StudentModels
+@model StudentSubjectVM
+
+@{
     ViewData["Title"] = "Student Details Page";
 }
 
@@ -16,7 +19,7 @@
     <h4 class="align-self-start">Student Details</h4>
 
     <div id="studentDetailsViewer" class="d-flex flex-column container-fluid">
-        @if (1 != 1)
+        @if (Model == null)
         {
             <h6>No Student Details Chosen yet</h6>
 
@@ -24,22 +27,36 @@
         else
         {
             <label>Student ID:</label>
-            <input class="disabled" type="text" readonly/>
+            <input class="disabled" type="text" value="@Model.Student.StudentID" readonly/>
 
             <label>Student Full Name:</label>
-            <input class="disabled" type="text" readonly />
+            <input class="disabled" type="text" value="@Model.Student.StudentFullName" readonly />
 
             <label>Current Year of Study:</label>
-            <input class="disabled" type="text" readonly />
+            <input class="disabled" type="text" value="@Model.Student.CurrentYearOfStudy" readonly />
 
             <label>Current Grade Average:</label>
-            <input class="disabled" type="number" readonly />
+            <input class="disabled" type="number" value="@Model.Student.GradeAvg" readonly />
 
-            <label>Ranking within Year Group:</label>
-            <input class="disabled" readonly />
+            @if (1 == 1)
+            {
+                <label>Ranking within Year Group:</label>
+                <input class="disabled" value="N/A" readonly />
 
-            <label>Will Advance?</label>
-            <input class="disabled" type="text" readonly />  
+            }
+
+            @if (Model.Student.GradeAvg > 30)
+            {
+                <label>Will Advance?</label>
+                <input class="disabled" type="text" value="TRUE" readonly />
+
+            }
+            else
+            {
+                <label>Will Advance?</label>
+                <input class="disabled" type="text" value="FALSE" readonly />
+
+            }
 
         }
 
@@ -47,7 +64,7 @@
     <br />
 
     <div class="d-flex flex-row container-fluid align-content-between gap-2">
-        <button class="btn">Clear <i class="fa-solid fa-rectangle-xmark"></i></button>
+        <a asp-controller="Student" asp-action="Index" class="btn">Clear <i class="fa-solid fa-rectangle-xmark"></i></a>
         <button data-bs-toggle="modal" data-bs-target="#modalDivSelectStudent" class="align-self-end btn">Select New Student <i class="fa-solid fa-user-graduate"></i></button>
 
     </div>
@@ -61,7 +78,7 @@
     <div id="availableGradesViewer" class="d-flex flex-column container-fluid border p-2" style="overflow-x:hidden; overflow-y: scroll;">
         @if (1 == 1)
         {
-            <h6>No Grades Uploaded yet</h6>
+            <h6>No Grades Uploaded yet (Not Available Within Prototype)</h6>
 
         }
 
@@ -81,18 +98,18 @@
             <div class="modal-body d-flex flex-column flex-fill container-fluid gap-2">
                 <h4 class="align-self-start">Find Student:</h4>
           
-                <form class="d-flex flex-column">
+                <form class="d-flex flex-column" asp-controller="Student" asp-action="FindStudent" method="get">
                     <select>
-                        <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+                        <option>Student</option>
 
                     </select>
                     <br />
 
                     <label>Value:</label>
-                    <input type="text" required/>
+                    <input name="studID" type="text" value="Example Student 1" readonly/>
                     <br />
 
-                    <button class="btn">Filter</button>
+                    <button type="submit" class="btn">Filter</button>
 
                 </form>
 
@@ -113,6 +130,7 @@
                 <form class="d-flex flex-column">
                     <select>
                         <option>Options <i class="fa-solid fa-arrow-down"></i></option>
+                        <option>No Filtering Available Within Prototype</option>
 
                     </select>
                     <br />
